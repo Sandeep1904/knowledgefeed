@@ -46,3 +46,6 @@ jest-test-results.json
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+
+
+ddgs_chat_conversation.json
