@@ -1,22 +1,110 @@
 import random
 import sys
 import json
+import re
+import urllib, urllib.request
+import xml.etree.ElementTree as ET
 from duckduckgo_search import DDGS
+from docling.document_converter import DocumentConverter
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+key = os.environ.get("OPENAI_API_KEY")
+
+client = OpenAI(
+    api_key = key,
+)
 
 
-md_str = """
-UUIDs (Universally Unique Identifiers) are designed to be unique across space and time, and they achieve this through several methods depending on the version of UUID being used. Here are the key points explaining how UUIDs can be unique without tracking previous generations:
 
-1. **Randomness**: Many UUID versions (like UUID4) generate IDs using random numbers. The probability of generating the same random number twice is extremely low due to the vast number of possible combinations (2^122 for UUID4).
+# for now, user only gives text input.
+# so the feed needs to be constructed with only topic names.
+# the topic names lead to either research papers, news articles, blogs, images, or videos.
+# the decision to categorize, shall be taken by an llm based on a predetermined logic.
+# according to the category, DDGS will fetch the relevant sources.
+# the output of this part should be a text file.
+# text can be empty for images and videos, that will be fed in the resources field.
 
-2. **Time and MAC Address**: Other versions (like UUID1) combine the current timestamp with the MAC address of the machine generating the UUID. This ensures that even if two UUIDs are generated at the same time, they will be unique due to the different MAC addresses.
 
-3. **Namespace and Name**: UUID5 and UUID3 generate IDs based on a namespace and a name using hashing (SHA-1 for UUID5 and MD5 for UUID3). This means that the same input will always produce the same UUID, but different inputs will produce different UUIDs.
 
-4. **Collision Resistance**: The design of UUIDs takes into account the likelihood of collisions. With a sufficiently large space (like 128 bits), the chance of generating the same UUID is astronomically low, making it practically unique.
+class Fetcher:
+    def __init__(self):
+        pass
 
-In summary, UUIDs use a combination of randomness, time, machine identifiers, and hashing to ensure uniqueness without needing to track previously generated UUIDs.
-"""
+    def categoriser(self, query):
+        
+        query_type = DDGS().chat(f"Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business. {query}", model='llama-3.3-70b')
+        query_type = query_type.strip().lower()
+        allContent = []
+      
+
+        if query_type not in ['academic', 'business']:
+            sys.stdout.write('Error: Invalid query type, returning default\n')
+            query_type = 'academic'  # default
+        
+        elif query_type == 'academic':
+            converter = DocumentConverter()
+            url = 'http://export.arxiv.org/api/query?search_query={query}&start=0&max_results=10'
+            xml_data = urllib.request.urlopen(url).read().decode('utf-8')
+            root = ET.fromstring(xml_data)
+            pdf_sources = [link.get('href') for link in root.findall(".//link[@title='pdf']")]
+            for source in pdf_sources:
+                news_sources = DDGS().news(query, max_results=10)
+                img_sources = DDGS().images(query, max_results=10)
+                video_sources = DDGS().videos(query, max_results=10)
+                md_str = converter.convert(source)
+                md_str = md_str.document.export_to_markdown()
+                
+                # add more to return resources if found
+                resources = {
+                    'images' : img_sources, # list of objects
+                    'videos' : video_sources, # list of objects
+                    'newsArticles': news_sources, # list of objects
+                }
+
+                allContent.append({'pdflink': source, 'md_str': md_str, 'resources': resources})
+
+        else:
+            news_sources = DDGS().news(query, max_results=10)
+            img_sources = DDGS().images(query, max_results=10)
+            video_sources = DDGS().videos(query, max_results=10)
+            resources = {
+                'images' : img_sources, # list of objects
+                'videos' : video_sources, # list of objects
+            }
+            for news in news_sources:
+                # replace this with processing of news articles
+                md_str = news['body']
+                allContent.append({'abslink': news['url'], 'md_str': md_str, 'resources': resources})
+
+        return allContent
+    
+
+class FeedBuilder:
+    
+    def __init__(self):
+        pass
+
+    def build_feed(self, user_input):
+        allContent = Fetcher().categoriser(user_input)
+        feed = []
+        for content in allContent:
+            abslink = content.get('abslink', None)
+            pdflink = content.get('pdflink', None)
+            md_str = content.get('md_str', None)
+            resources = content.get('resources', None)
+            model = 'llama-3.3-70b'
+            source = 'DDGS'
+            temp = 0.7
+            personality = 'friendly'
+            ob = ObjectBuilder()
+            feed.append(ob.build_object(abslink, pdflink, md_str, model, source, temp, personality, resources))
+            
+        return feed
+
 
 class Feed:
     existing_ids = set() 
@@ -116,17 +204,27 @@ class Modifier:
         pass
 
 
-class Builder:
+class ObjectBuilder:
 
     def __init__(self):
         pass
 
-    def build_posts(self, md_str, resources={}):
+    def build_posts(self, md_str, resources):
         self.md_str = md_str
         self.recources = resources
         posts = Posts()
-        results = DDGS().chat("Chunk this text into meaningful parts and only return a list object: UUIDs (Universally Unique Identifiers) are designed to be unique across space and time, and they achieve this through several methods depending on the version of UUID being used. Here are the key points explaining how UUIDs can be unique without tracking previous generations:\n\n1. **Randomness**: Many UUID versions (like UUID4) generate IDs using random numbers. The probability of generating the same random number twice is extremely low due to the vast number of possible combinations (2^122 for UUID4).\n\n2. **Time and MAC Address**: Other versions (like UUID1) combine the current timestamp with the MAC address of the machine generating the UUID. This ensures that even if two UUIDs are generated at the same time, they will be unique due to the different MAC addresses.\n\n3. **Namespace and Name**: UUID5 and UUID3 generate IDs based on a namespace and a name using hashing (SHA-1 for UUID5 and MD5 for UUID3). This means that the same input will always produce the same UUID, but different inputs will produce different UUIDs.\n\n4. **Collision Resistance**: The design of UUIDs takes into account the likelihood of collisions. With a sufficiently large space (like 128 bits), the chance of generating the same UUID is astronomically low, making it practically unique.\n\nIn summary, UUIDs use a combination of randomness, time, machine identifiers, and hashing to ensure uniqueness without needing to track previously generated UUIDs.", model='gpt-4o-mini')
-        
+        try:
+            results = DDGS().chat(f"Chunk this text into meaningful parts and only return a list object: {md_str}", model='llama-3.3-70b')
+        except Exception as e:
+            sys.stdout.write(f"Error: {e}\nUsing OpenAI instead\n")
+            openaiResponse = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "assistant", "content": "Chunk this text into meaningful parts and only return a list object:"},
+                    {"role": "user", "content": md_str},
+                ]
+            )
+            results = openaiResponse.choices[0].message.content
         try:
             sentences = json.loads(results)
             for i, sentence in enumerate(sentences):
@@ -139,17 +237,13 @@ class Builder:
         # print(posts.get_posts())
         return posts
 
-    def build_feed(self, abslink, pdflink, md_str, model, source, temp, personality):
-        feed = Feed(abslink, pdflink, md_str)
+    def build_object(self, abslink, pdflink, md_str, model, source, temp, personality, resources):
+        feed_object = Feed(abslink, pdflink, md_str)
         agent = Agent(model, source, temp, personality)
-        feed.add_agent(agent.get_agent())
+        feed_object.add_agent(agent.get_agent())
         
-        posts = self.build_posts(md_str)
+        posts = self.build_posts(md_str, resources)
         
-        feed.add_posts(posts.get_posts())
+        feed_object.add_posts(posts.get_posts())
         sys.stdout.write('Feed built successfully!\n')
-        return feed.get_feed()
-        
-
-my_feed = Builder().build_feed('https://example.com', 'https://example.com/pdf', md_str, 'gpt-4o-mini', 'ddgs', 'medium', 'nerdy')
-print(json.dumps(my_feed, indent=4))
+        return feed_object.get_feed()
