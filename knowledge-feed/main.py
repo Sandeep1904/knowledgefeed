@@ -1,4 +1,4 @@
-import random
+import copy
 import sys
 import json
 import re
@@ -35,8 +35,19 @@ class Fetcher:
         pass
 
     def categoriser(self, query):
-        
-        query_type = DDGS().chat(f"Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business. {query}", model='llama-3.3-70b')
+        try:
+            query_type = DDGS().chat(f"Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business. {query}", model='llama-3.3-70b')
+        except Exception as e:
+            sys.stdout.write(f"Error: {e}\nUsing OpenAI instead\n")
+            openaiResponse = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "assistant", "content": "Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business."},
+                    {"role": "user", "content": query},
+                ]
+            )
+            query_type = openaiResponse.choices[0].message.content
+        # query_type = DDGS().chat(f"Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business. {query}", model='llama-3.3-70b')
         query_type = query_type.strip().lower()
         allContent = []
       
@@ -52,9 +63,9 @@ class Fetcher:
             root = ET.fromstring(xml_data)
             pdf_sources = [link.get('href') for link in root.findall(".//link[@title='pdf']")]
             for source in pdf_sources:
-                news_sources = DDGS().news(query, max_results=10)
-                img_sources = DDGS().images(query, max_results=10)
-                video_sources = DDGS().videos(query, max_results=10)
+                news_sources = DDGS().news(query, max_results=2)
+                img_sources = DDGS().images(query, max_results=2)
+                video_sources = DDGS().videos(query, max_results=2)
                 md_str = converter.convert(source)
                 md_str = md_str.document.export_to_markdown()
                 
@@ -68,9 +79,9 @@ class Fetcher:
                 allContent.append({'pdflink': source, 'md_str': md_str, 'resources': resources})
 
         else:
-            news_sources = DDGS().news(query, max_results=10)
-            img_sources = DDGS().images(query, max_results=10)
-            video_sources = DDGS().videos(query, max_results=10)
+            news_sources = DDGS().news(query, max_results=2)
+            img_sources = DDGS().images(query, max_results=2)
+            video_sources = DDGS().videos(query, max_results=2)
             resources = {
                 'images' : img_sources, # list of objects
                 'videos' : video_sources, # list of objects
@@ -107,22 +118,20 @@ class FeedBuilder:
 
 
 class Feed:
-    existing_ids = set() 
+    id = -1
 
-    def randidgenerator(self):
-        unique_id = random.randint(10000, 99999)  
-        if unique_id not in self.existing_ids:
-            self.existing_ids.add(unique_id)
-            return unique_id
+    def idgenerator(self):
+        self.id += 1
+        return self.id
 
 
     def __init__(self, abslink, pdflink, md_str):
         self.abslink = abslink
         self.pdflink = pdflink
         self.md_str = md_str
-        self.id = self.randidgenerator()
+        self.id = self.idgenerator()
         self.items = {
-            'id': self.id,
+            'objectID': self.id,
             'abslink': self.abslink,
             'pdflink': self.pdflink,
             'md_str': self.md_str,
@@ -173,22 +182,20 @@ class Posts:
 
 class Post:
 
-    existing_ids = set() 
+    id = -1
 
-    def randidgenerator(self):
-        unique_id = random.randint(10000, 99999)  
-        if unique_id not in self.existing_ids:
-            self.existing_ids.add(unique_id)
-            return unique_id
+    def idgenerator(self):
+        self.id += 1
+        return self.id
 
     def __init__(self, text, chatContext, resources):
         self.text = text
         self.chatContext = chatContext
         self.resources = resources
-        self.id = self.randidgenerator()
+        self.id = self.idgenerator()
         self.resources = resources
         self.post = {
-            'id': self.id,
+            'postID': self.id,
             'text': self.text,
             'chatContext': self.chatContext,
             'resources': self.resources,
@@ -198,10 +205,36 @@ class Post:
         return self.post
     
 
-class Modifier:
+class FeedModifier:
+    # return a copy of origianl feed. user can choose to replace.
 
-    def __init__(self, context):
+    def __init__(self):
         pass
+
+    def modify_agent(self, feed, objectID, model, source, temp, personality):
+        sys.stdout.write("Old agent: \n")
+        sys.stdout.write(str(feed[objectID].get('agent')))
+        copyfeed = copy.deepcopy(feed)
+        copyfeed[objectID]['agent'].update({
+            'model': model,
+            'source': source,
+            'temp': temp,
+            'personality': personality,
+        })
+        sys.stdout.write(f"\nAfter modifying agent for objectID: {objectID}\n")
+        sys.stdout.write(str(copyfeed[objectID].get('agent')))
+        return copyfeed
+
+    def modify_chatContext(self, feed, objectID, postID, newchatContext):
+        sys.stdout.write("\nOld chatContext: \n")
+        sys.stdout.write(str(feed[objectID]['posts'][postID].get('chatContext')))
+        copyfeed = copy.deepcopy(feed)
+        copyfeed[objectID]['posts'][postID].update({'chatContext': newchatContext})
+        sys.stdout.write(f"\nAfter modifying chatContext for objectID: {objectID}, postID: {postID}\n")
+        sys.stdout.write(str(copyfeed[objectID]['posts'][postID].get('chatContext')))
+        return copyfeed
+
+    
 
 
 class ObjectBuilder:

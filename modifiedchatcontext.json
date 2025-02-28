@@ -1,0 +1,1417 @@
+[
+    {
+        "id": 56453,
+        "abslink": "https://www.forbes.com/sites/jaymcgregor/2025/02/27/google-one-ai-premium-gemini-advanced-xiaomi-free-offer/",
+        "pdflink": null,
+        "md_str": "This story was updated on February 17th with details of the Xiaomi 15 launch. According to a new report, Google is extending its free cloud storage and Gemini Advanced offer to Xiaomi phones. Android Authority found code in the Google app (version16.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 66312,
+        "abslink": "https://www.msn.com/en-us/technology/tech-companies/google-makes-it-easier-to-scrub-results-about-you-from-search/ar-AA1zVrBk",
+        "pdflink": null,
+        "md_str": "Type in your name, address, and phone number and Google will alert you if it ever finds results that include personal data. 'We'll do the hard work for you,' Google says.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 40353,
+        "abslink": "https://www.msn.com/en-us/money/companies/google-search-changes-upend-publishers-product-review-sites/ar-AA1zUqwc",
+        "pdflink": null,
+        "md_str": "New rules for recommendation sites like Forbes Vetted and CNN Underscored threaten their business models and hurt freelancers.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 70656,
+        "abslink": "https://www.forbes.com/sites/andrewwilliams/2025/02/27/googles-pixel-watch-3-can-tell-if-your-heart-stops/",
+        "pdflink": null,
+        "md_str": "A \"first of its kind\" feature of the Pixel Watch 3, loss of pulse detection, is finally heading to U.S. users after it cleared the FDA.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 86416,
+        "abslink": "https://searchengineland.com/google-ads-srun-different-auctions-for-each-ad-location-452749",
+        "pdflink": null,
+        "md_str": "Google updated its documentation on how the Google Ads auction works to say, \"We run different auctions for each ad location.\" Previously, that document did not say that and t",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 69597,
+        "abslink": "https://www.msn.com/en-us/news/technology/google-s-ai-generated-answers-might-pose-a-monopoly-problem/ar-AA1zPMkz",
+        "pdflink": null,
+        "md_str": "The tech industry is charging full-steam ahead on AI, investing tens of billions of dollars into the technology and insisting that consumers get used to having AI pop up in every program they use, from Gmail to iPhone notification summaries.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": [
+            {
+                "id": 18698,
+                "text": "The tech industry is charging full-steam ahead on AI,",
+                "chatContext": "This is the new chat context",
+                "resources": {
+                    "images": [
+                        {
+                            "title": "Google Logo and symbol, meaning, history, sign.",
+                            "image": "https://logolook.net/wp-content/uploads/2021/06/Google-Logo-19981.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.--vXPAKUfouC38_EEWEYZQHaEK&pid=Api",
+                            "url": "https://logolook.net/google-logo/",
+                            "height": 2160,
+                            "width": 3840,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo: valor, hist\u00f3ria, PNG",
+                            "image": "https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Hc61OnxQzzhxtp4oJgHdKwHaEK&pid=Api",
+                            "url": "https://logosmarcas.net/google-logo/",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google logo icon. Vector illustration 10930001 Vector Art at Vecteezy",
+                            "image": "https://static.vecteezy.com/system/resources/previews/010/930/001/original/google-logo-icon-illustration-free-vector.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.kDgfn1RL9uUQS-B0fbHePQHaDt&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/10930001-google-logo-icon-vector-illustration",
+                            "height": 962,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "google logo for search site 22721557 PNG",
+                            "image": "https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.vQhNBDQatAdfMfp9Hz325gHaEo&pid=Api",
+                            "url": "https://www.vecteezy.com/png/22721557-google-logo-for-search-site",
+                            "height": 1200,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google rolled out new site names, favicon and sponsored label on ...",
+                            "image": "https://searchengineland.com/wp-content/seloads/2018/07/google-building-logo-shutterstock_559400386.jpg",
+                            "thumbnail": "https://tse4.mm.bing.net/th?id=OIP.vJML8VXkd741rgRNkquq6AHaF0&pid=Api",
+                            "url": "https://searchengineland.com/google-rolled-out-new-site-names-favicon-and-sponsored-label-on-desktop-search-394084",
+                            "height": 1507,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "3D Google vector logo. Google is USA multinational corporation ...",
+                            "image": "https://static.vecteezy.com/system/resources/previews/013/734/184/original/3d-google-logo-google-is-usa-multinational-corporation-free-vector.jpg",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.DoYuESoRecI9l-vyqdrEnQHaE-&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/13734184-3d-google-vector-logo-google-is-usa-multinational-corporation",
+                            "height": 1292,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo Wallpapers (73+ images)",
+                            "image": "http://getwallpapers.com/wallpaper/full/b/9/d/773530-gorgerous-google-logo-wallpapers-2560x1600-for-tablet.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.OpfmP8dIVW3neRPv7-lJtQHaEo&pid=Api",
+                            "url": "http://getwallpapers.com/collection/google-logo-wallpapers",
+                            "height": 1600,
+                            "width": 2560,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Download High Quality google logo transparent background Transparent ...",
+                            "image": "https://clipartcraft.com/images/transparent-background-google-logo-cool-6.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.yV2ncg6qD_UvWOpobISMJgHaHa&pid=Api",
+                            "url": "https://clipartcraft.com/explore/google-logo-transparent-background/",
+                            "height": 920,
+                            "width": 920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "The History, Evolution & Meaning Behind The Google Logo",
+                            "image": "https://dwglogo.com/wp-content/uploads/2022/04/the-logo-evolution-of-google.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Tr_0NECUQakLw5EtpeICZQHaGy&pid=Api",
+                            "url": "https://dwglogo.com/google/",
+                            "height": 1278,
+                            "width": 1393,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "What Makes Google's Gemini the Next-level AI Model to Watch Out For?",
+                            "image": "https://insights.daffodilsw.com/hs-fs/hubfs/Google+I_o+event.webp?width=1920&height=1080&name=Google+I_o+event.webp",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.MlVYpArU_EtMLGQaySs3AgHaEK&pid=Api",
+                            "url": "https://insights.daffodilsw.com/blog/google-gemini-algorithm-the-next-level-ai-model",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        }
+                    ],
+                    "videos": [
+                        {
+                            "content": "https://www.youtube.com/watch?v=3KtWfp0UopM",
+                            "description": "Google is celebrating the most searched figures and moments in 25 years of Google Search. From BTS to Taylor Swift, see the moments that have changed the world and inspired the next generation to come. Explore more at https://trends.google.com/trends/yis/2023/GLOBAL/ #YearinSearch Audio described version here: https://www.youtube.com/watch?v ...",
+                            "duration": "3:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.CcujVXmGwFshwQ_1731003838&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:00:31.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 355618783
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AqduXftWeEE",
+                            "description": "This year, we're celebrating the most searched figures and moments in 25 years of Google Search. From some of the world's most iconic performances, to history-making breakthroughs, see the moments that have changed the world and inspired the next generation to come. Explore more at https://yearinsearch.google/trends #YearinSearch Subscribe ...",
+                            "duration": "8:26",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AqduXftWeEE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AqduXftWeEE?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.7qmcPX6oLa4Ung_1732698098&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:30:13.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 316556
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched (Audio Described)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=cNfINi5CNbY",
+                            "description": "Tune in to find out how we're furthering our mission to organize the world's information and make it universally accessible and useful. To watch this keynote interpreted in American Sign Language (ASL), please click here: https://youtube.com/live/bqnlpDEmFUU?feature=share For a quick recap of Google I/O, check out this video: https://youtu.be ...",
+                            "duration": "2:05:20",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1",
+                            "image_token": "5a621d453eeaa3011e3105cd5317fcd5f65cdf9cf586969ffae893cd693e9f02",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.5vZzJ5haw-g2iw_1729550252&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-05-10T19:49:45.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 2311329
+                            },
+                            "title": "Google Keynote (Google I/O '23)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AxwWiX_AJuY",
+                            "description": "- Software consulting services: https://www.blungo.com - Zoho One Course (FREE): https://go.blungo.com/zoho-one-course Google Workspace is a suite of business applications and collaboration tools that you can use to administrate your business and accomplish most of the day-to-day office tasks, like emails, meetings, spreadsheets, and more. The ...",
+                            "duration": "6:54",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1",
+                            "image_token": "e97a35c769295251a887952db9617dc6486eee673f45007221155bf590f43a1c",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.mixmLHRUoCvh1w_1734339813&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2022-04-18T14:30:02.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 573814
+                            },
+                            "title": "All 15+ Google Workspace apps explained under 7 minutes",
+                            "uploader": "blungo"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=7vSnesQDLBE",
+                            "description": "0:00 Intro 0:22 Creating a presentation 00:58 Formating a presentation 01:36 Navigating Google Slides 02:45 Adding media 03:27 Adding animation 04:39 Presenting and exporting Watch this tutorial to learn how to use Google Slides. MORE HOW TO VIDEOS: How To Overclock A CPU https://www.youtube.com/watch?v=dJMDB3PjBw8 How To Delete Your LinkedIn ...",
+                            "duration": "5:22",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1",
+                            "image_token": "25c05b25ed3ce918afa691bc7da19ea805d725db3fb3c2df6ce03765ac2c7bcb",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.kDt68bbx0Jl_bA_1731470855&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-07-23T16:00:04.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 472742
+                            },
+                            "title": "How To Use Google Slides",
+                            "uploader": "Insider Tech"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=jV1vkHv4zq8",
+                            "description": "Gemini marks the next phase on our journey to making AI more accessible for everyone. Gemini was developed to recognize, understand, and combine different types of information including text, images, audio, video, and code. Its state-of-the-art performance gives it remarkable new capabilities that is user-friendly for anybody. Plus, it's ...",
+                            "duration": "4:35",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1",
+                            "image_token": "b27564300e2270230b91c2554faa7a6b464fd5539d474933f06196ed9060406a",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.K0YllU9jVoBwDQ_1740448070&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-06T15:01:29.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 1505720
+                            },
+                            "title": "Google's newest and most capable AI | Gemini",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=mbyMWDhQCz4",
+                            "description": "How to Make Google Your Homepage in Google Chrome. You have the ability to set Google Chrome to open up any launch page for both the homepage and startup page. These two pages aren't the same by default, unless you set them to be. This tutorial will apply for computers, laptops, desktops, and tablets running the Windows 10, Windows 8/8.1 ...",
+                            "duration": "1:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1",
+                            "image_token": "6aeaa8cb2a0d8cbefe833dcf50f24e5f146af95057ee710beea1bf147833387a",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.0RJGpx-4K1GaiA_1739862472&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-01-03T21:00:12.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 206465
+                            },
+                            "title": "How to Make Google Your Homepage in Google Chrome",
+                            "uploader": "MDTechVideos"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=_oYMrYCs2fU",
+                            "description": "Google Workspace Basics Full Course Tutorial (4+ Hours) Get Ad-Free Training by becoming a member today! https://www.youtube.com/channel/UCqyBfm_H9ugGirk1ufYA2YA/join Exercise Files: https://learnitanytime.com/p/exercise-files-google-workspace-basics-full-course-tutorial Who it's for: This course is recommended for users who want a quick ...",
+                            "duration": "4:35:44",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1",
+                            "image_token": "d82d01c88bb6d41d6546c94e0f1e9cb9f6a3189d516a39a664a87d644cec2798",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.lzSfbAwNcSchOA_1733935683&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-11-17T17:30:10.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 56348
+                            },
+                            "title": "Google Workspace Basics Full Course Tutorial (4+ Hours)",
+                            "uploader": "Learnit Training"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=CrwrljPQaYA",
+                            "description": "Google Gemini is Google's AI chatbot and it's available for free to use. It's the direct competitor to ChatGPT and Microsoft Copilot. To access it, simply go to https://gemini.google.com/ and log in with your Google account. In this video, I'll cover all the useful functions of Gemini as well as some prompting techniques to make it much ...",
+                            "duration": "16:53",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1",
+                            "image_token": "3696c03b4ea54d5e69166349a66cf4c3535f3ff881a6e49eb56aab0f5d8a35e8",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.2ZRvhSfDBpoAiw_1732916319&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2024-04-05T22:01:55.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 216698
+                            },
+                            "title": "How to Use Google Gemini - Including New Prompts",
+                            "uploader": "Howfinity"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=3tvGp_X-2Ek",
+                            "description": "Google Chrome is an intuitive, yet powerful web browsing by Google. How To Use Google Chrome - Tips And Tricks If you are new to Chrome, you should pay close attention to this tutorial because I walk you through tips and tricks you can implement right now to optimize your browsing experience.",
+                            "duration": "17:39",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1",
+                            "image_token": "55f93191c80e60c2cee20c83980fdb80813582d33fb1f64aa2c4ecc1e3534a56",
+                            "images": {
+                                "large": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "medium": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.K1arRPzZzEPM-A_1727383022&pid=Api",
+                                "small": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2015-10-24T20:50:07.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 293330
+                            },
+                            "title": "How To Use Google Chrome - Step By Step Tutorial",
+                            "uploader": "Seth Riley"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 80107,
+                "text": "investing tens of billions of dollars into the technology",
+                "chatContext": "The tech industry is charging full-steam ahead on AI, investing tens of billions of dollars into the technology and insisting that consumers get used to having AI pop up in every program they use, from Gmail to iPhone notification summaries.",
+                "resources": {
+                    "images": [
+                        {
+                            "title": "Google Logo and symbol, meaning, history, sign.",
+                            "image": "https://logolook.net/wp-content/uploads/2021/06/Google-Logo-19981.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.--vXPAKUfouC38_EEWEYZQHaEK&pid=Api",
+                            "url": "https://logolook.net/google-logo/",
+                            "height": 2160,
+                            "width": 3840,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo: valor, hist\u00f3ria, PNG",
+                            "image": "https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Hc61OnxQzzhxtp4oJgHdKwHaEK&pid=Api",
+                            "url": "https://logosmarcas.net/google-logo/",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google logo icon. Vector illustration 10930001 Vector Art at Vecteezy",
+                            "image": "https://static.vecteezy.com/system/resources/previews/010/930/001/original/google-logo-icon-illustration-free-vector.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.kDgfn1RL9uUQS-B0fbHePQHaDt&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/10930001-google-logo-icon-vector-illustration",
+                            "height": 962,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "google logo for search site 22721557 PNG",
+                            "image": "https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.vQhNBDQatAdfMfp9Hz325gHaEo&pid=Api",
+                            "url": "https://www.vecteezy.com/png/22721557-google-logo-for-search-site",
+                            "height": 1200,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google rolled out new site names, favicon and sponsored label on ...",
+                            "image": "https://searchengineland.com/wp-content/seloads/2018/07/google-building-logo-shutterstock_559400386.jpg",
+                            "thumbnail": "https://tse4.mm.bing.net/th?id=OIP.vJML8VXkd741rgRNkquq6AHaF0&pid=Api",
+                            "url": "https://searchengineland.com/google-rolled-out-new-site-names-favicon-and-sponsored-label-on-desktop-search-394084",
+                            "height": 1507,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "3D Google vector logo. Google is USA multinational corporation ...",
+                            "image": "https://static.vecteezy.com/system/resources/previews/013/734/184/original/3d-google-logo-google-is-usa-multinational-corporation-free-vector.jpg",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.DoYuESoRecI9l-vyqdrEnQHaE-&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/13734184-3d-google-vector-logo-google-is-usa-multinational-corporation",
+                            "height": 1292,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo Wallpapers (73+ images)",
+                            "image": "http://getwallpapers.com/wallpaper/full/b/9/d/773530-gorgerous-google-logo-wallpapers-2560x1600-for-tablet.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.OpfmP8dIVW3neRPv7-lJtQHaEo&pid=Api",
+                            "url": "http://getwallpapers.com/collection/google-logo-wallpapers",
+                            "height": 1600,
+                            "width": 2560,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Download High Quality google logo transparent background Transparent ...",
+                            "image": "https://clipartcraft.com/images/transparent-background-google-logo-cool-6.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.yV2ncg6qD_UvWOpobISMJgHaHa&pid=Api",
+                            "url": "https://clipartcraft.com/explore/google-logo-transparent-background/",
+                            "height": 920,
+                            "width": 920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "The History, Evolution & Meaning Behind The Google Logo",
+                            "image": "https://dwglogo.com/wp-content/uploads/2022/04/the-logo-evolution-of-google.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Tr_0NECUQakLw5EtpeICZQHaGy&pid=Api",
+                            "url": "https://dwglogo.com/google/",
+                            "height": 1278,
+                            "width": 1393,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "What Makes Google's Gemini the Next-level AI Model to Watch Out For?",
+                            "image": "https://insights.daffodilsw.com/hs-fs/hubfs/Google+I_o+event.webp?width=1920&height=1080&name=Google+I_o+event.webp",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.MlVYpArU_EtMLGQaySs3AgHaEK&pid=Api",
+                            "url": "https://insights.daffodilsw.com/blog/google-gemini-algorithm-the-next-level-ai-model",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        }
+                    ],
+                    "videos": [
+                        {
+                            "content": "https://www.youtube.com/watch?v=3KtWfp0UopM",
+                            "description": "Google is celebrating the most searched figures and moments in 25 years of Google Search. From BTS to Taylor Swift, see the moments that have changed the world and inspired the next generation to come. Explore more at https://trends.google.com/trends/yis/2023/GLOBAL/ #YearinSearch Audio described version here: https://www.youtube.com/watch?v ...",
+                            "duration": "3:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.CcujVXmGwFshwQ_1731003838&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:00:31.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 355618783
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AqduXftWeEE",
+                            "description": "This year, we're celebrating the most searched figures and moments in 25 years of Google Search. From some of the world's most iconic performances, to history-making breakthroughs, see the moments that have changed the world and inspired the next generation to come. Explore more at https://yearinsearch.google/trends #YearinSearch Subscribe ...",
+                            "duration": "8:26",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AqduXftWeEE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AqduXftWeEE?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.7qmcPX6oLa4Ung_1732698098&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:30:13.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 316556
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched (Audio Described)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=cNfINi5CNbY",
+                            "description": "Tune in to find out how we're furthering our mission to organize the world's information and make it universally accessible and useful. To watch this keynote interpreted in American Sign Language (ASL), please click here: https://youtube.com/live/bqnlpDEmFUU?feature=share For a quick recap of Google I/O, check out this video: https://youtu.be ...",
+                            "duration": "2:05:20",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1",
+                            "image_token": "5a621d453eeaa3011e3105cd5317fcd5f65cdf9cf586969ffae893cd693e9f02",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.5vZzJ5haw-g2iw_1729550252&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-05-10T19:49:45.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 2311329
+                            },
+                            "title": "Google Keynote (Google I/O '23)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AxwWiX_AJuY",
+                            "description": "- Software consulting services: https://www.blungo.com - Zoho One Course (FREE): https://go.blungo.com/zoho-one-course Google Workspace is a suite of business applications and collaboration tools that you can use to administrate your business and accomplish most of the day-to-day office tasks, like emails, meetings, spreadsheets, and more. The ...",
+                            "duration": "6:54",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1",
+                            "image_token": "e97a35c769295251a887952db9617dc6486eee673f45007221155bf590f43a1c",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.mixmLHRUoCvh1w_1734339813&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2022-04-18T14:30:02.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 573814
+                            },
+                            "title": "All 15+ Google Workspace apps explained under 7 minutes",
+                            "uploader": "blungo"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=7vSnesQDLBE",
+                            "description": "0:00 Intro 0:22 Creating a presentation 00:58 Formating a presentation 01:36 Navigating Google Slides 02:45 Adding media 03:27 Adding animation 04:39 Presenting and exporting Watch this tutorial to learn how to use Google Slides. MORE HOW TO VIDEOS: How To Overclock A CPU https://www.youtube.com/watch?v=dJMDB3PjBw8 How To Delete Your LinkedIn ...",
+                            "duration": "5:22",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1",
+                            "image_token": "25c05b25ed3ce918afa691bc7da19ea805d725db3fb3c2df6ce03765ac2c7bcb",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.kDt68bbx0Jl_bA_1731470855&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-07-23T16:00:04.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 472742
+                            },
+                            "title": "How To Use Google Slides",
+                            "uploader": "Insider Tech"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=jV1vkHv4zq8",
+                            "description": "Gemini marks the next phase on our journey to making AI more accessible for everyone. Gemini was developed to recognize, understand, and combine different types of information including text, images, audio, video, and code. Its state-of-the-art performance gives it remarkable new capabilities that is user-friendly for anybody. Plus, it's ...",
+                            "duration": "4:35",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1",
+                            "image_token": "b27564300e2270230b91c2554faa7a6b464fd5539d474933f06196ed9060406a",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.K0YllU9jVoBwDQ_1740448070&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-06T15:01:29.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 1505720
+                            },
+                            "title": "Google's newest and most capable AI | Gemini",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=mbyMWDhQCz4",
+                            "description": "How to Make Google Your Homepage in Google Chrome. You have the ability to set Google Chrome to open up any launch page for both the homepage and startup page. These two pages aren't the same by default, unless you set them to be. This tutorial will apply for computers, laptops, desktops, and tablets running the Windows 10, Windows 8/8.1 ...",
+                            "duration": "1:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1",
+                            "image_token": "6aeaa8cb2a0d8cbefe833dcf50f24e5f146af95057ee710beea1bf147833387a",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.0RJGpx-4K1GaiA_1739862472&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-01-03T21:00:12.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 206465
+                            },
+                            "title": "How to Make Google Your Homepage in Google Chrome",
+                            "uploader": "MDTechVideos"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=_oYMrYCs2fU",
+                            "description": "Google Workspace Basics Full Course Tutorial (4+ Hours) Get Ad-Free Training by becoming a member today! https://www.youtube.com/channel/UCqyBfm_H9ugGirk1ufYA2YA/join Exercise Files: https://learnitanytime.com/p/exercise-files-google-workspace-basics-full-course-tutorial Who it's for: This course is recommended for users who want a quick ...",
+                            "duration": "4:35:44",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1",
+                            "image_token": "d82d01c88bb6d41d6546c94e0f1e9cb9f6a3189d516a39a664a87d644cec2798",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.lzSfbAwNcSchOA_1733935683&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-11-17T17:30:10.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 56348
+                            },
+                            "title": "Google Workspace Basics Full Course Tutorial (4+ Hours)",
+                            "uploader": "Learnit Training"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=CrwrljPQaYA",
+                            "description": "Google Gemini is Google's AI chatbot and it's available for free to use. It's the direct competitor to ChatGPT and Microsoft Copilot. To access it, simply go to https://gemini.google.com/ and log in with your Google account. In this video, I'll cover all the useful functions of Gemini as well as some prompting techniques to make it much ...",
+                            "duration": "16:53",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1",
+                            "image_token": "3696c03b4ea54d5e69166349a66cf4c3535f3ff881a6e49eb56aab0f5d8a35e8",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.2ZRvhSfDBpoAiw_1732916319&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2024-04-05T22:01:55.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 216698
+                            },
+                            "title": "How to Use Google Gemini - Including New Prompts",
+                            "uploader": "Howfinity"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=3tvGp_X-2Ek",
+                            "description": "Google Chrome is an intuitive, yet powerful web browsing by Google. How To Use Google Chrome - Tips And Tricks If you are new to Chrome, you should pay close attention to this tutorial because I walk you through tips and tricks you can implement right now to optimize your browsing experience.",
+                            "duration": "17:39",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1",
+                            "image_token": "55f93191c80e60c2cee20c83980fdb80813582d33fb1f64aa2c4ecc1e3534a56",
+                            "images": {
+                                "large": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "medium": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.K1arRPzZzEPM-A_1727383022&pid=Api",
+                                "small": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2015-10-24T20:50:07.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 293330
+                            },
+                            "title": "How To Use Google Chrome - Step By Step Tutorial",
+                            "uploader": "Seth Riley"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 26978,
+                "text": "and insisting that consumers get used to having AI pop up in every program they use,",
+                "chatContext": "The tech industry is charging full-steam ahead on AI, investing tens of billions of dollars into the technology and insisting that consumers get used to having AI pop up in every program they use, from Gmail to iPhone notification summaries.",
+                "resources": {
+                    "images": [
+                        {
+                            "title": "Google Logo and symbol, meaning, history, sign.",
+                            "image": "https://logolook.net/wp-content/uploads/2021/06/Google-Logo-19981.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.--vXPAKUfouC38_EEWEYZQHaEK&pid=Api",
+                            "url": "https://logolook.net/google-logo/",
+                            "height": 2160,
+                            "width": 3840,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo: valor, hist\u00f3ria, PNG",
+                            "image": "https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Hc61OnxQzzhxtp4oJgHdKwHaEK&pid=Api",
+                            "url": "https://logosmarcas.net/google-logo/",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google logo icon. Vector illustration 10930001 Vector Art at Vecteezy",
+                            "image": "https://static.vecteezy.com/system/resources/previews/010/930/001/original/google-logo-icon-illustration-free-vector.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.kDgfn1RL9uUQS-B0fbHePQHaDt&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/10930001-google-logo-icon-vector-illustration",
+                            "height": 962,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "google logo for search site 22721557 PNG",
+                            "image": "https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.vQhNBDQatAdfMfp9Hz325gHaEo&pid=Api",
+                            "url": "https://www.vecteezy.com/png/22721557-google-logo-for-search-site",
+                            "height": 1200,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google rolled out new site names, favicon and sponsored label on ...",
+                            "image": "https://searchengineland.com/wp-content/seloads/2018/07/google-building-logo-shutterstock_559400386.jpg",
+                            "thumbnail": "https://tse4.mm.bing.net/th?id=OIP.vJML8VXkd741rgRNkquq6AHaF0&pid=Api",
+                            "url": "https://searchengineland.com/google-rolled-out-new-site-names-favicon-and-sponsored-label-on-desktop-search-394084",
+                            "height": 1507,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "3D Google vector logo. Google is USA multinational corporation ...",
+                            "image": "https://static.vecteezy.com/system/resources/previews/013/734/184/original/3d-google-logo-google-is-usa-multinational-corporation-free-vector.jpg",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.DoYuESoRecI9l-vyqdrEnQHaE-&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/13734184-3d-google-vector-logo-google-is-usa-multinational-corporation",
+                            "height": 1292,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo Wallpapers (73+ images)",
+                            "image": "http://getwallpapers.com/wallpaper/full/b/9/d/773530-gorgerous-google-logo-wallpapers-2560x1600-for-tablet.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.OpfmP8dIVW3neRPv7-lJtQHaEo&pid=Api",
+                            "url": "http://getwallpapers.com/collection/google-logo-wallpapers",
+                            "height": 1600,
+                            "width": 2560,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Download High Quality google logo transparent background Transparent ...",
+                            "image": "https://clipartcraft.com/images/transparent-background-google-logo-cool-6.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.yV2ncg6qD_UvWOpobISMJgHaHa&pid=Api",
+                            "url": "https://clipartcraft.com/explore/google-logo-transparent-background/",
+                            "height": 920,
+                            "width": 920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "The History, Evolution & Meaning Behind The Google Logo",
+                            "image": "https://dwglogo.com/wp-content/uploads/2022/04/the-logo-evolution-of-google.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Tr_0NECUQakLw5EtpeICZQHaGy&pid=Api",
+                            "url": "https://dwglogo.com/google/",
+                            "height": 1278,
+                            "width": 1393,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "What Makes Google's Gemini the Next-level AI Model to Watch Out For?",
+                            "image": "https://insights.daffodilsw.com/hs-fs/hubfs/Google+I_o+event.webp?width=1920&height=1080&name=Google+I_o+event.webp",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.MlVYpArU_EtMLGQaySs3AgHaEK&pid=Api",
+                            "url": "https://insights.daffodilsw.com/blog/google-gemini-algorithm-the-next-level-ai-model",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        }
+                    ],
+                    "videos": [
+                        {
+                            "content": "https://www.youtube.com/watch?v=3KtWfp0UopM",
+                            "description": "Google is celebrating the most searched figures and moments in 25 years of Google Search. From BTS to Taylor Swift, see the moments that have changed the world and inspired the next generation to come. Explore more at https://trends.google.com/trends/yis/2023/GLOBAL/ #YearinSearch Audio described version here: https://www.youtube.com/watch?v ...",
+                            "duration": "3:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.CcujVXmGwFshwQ_1731003838&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:00:31.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 355618783
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AqduXftWeEE",
+                            "description": "This year, we're celebrating the most searched figures and moments in 25 years of Google Search. From some of the world's most iconic performances, to history-making breakthroughs, see the moments that have changed the world and inspired the next generation to come. Explore more at https://yearinsearch.google/trends #YearinSearch Subscribe ...",
+                            "duration": "8:26",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AqduXftWeEE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AqduXftWeEE?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.7qmcPX6oLa4Ung_1732698098&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:30:13.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 316556
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched (Audio Described)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=cNfINi5CNbY",
+                            "description": "Tune in to find out how we're furthering our mission to organize the world's information and make it universally accessible and useful. To watch this keynote interpreted in American Sign Language (ASL), please click here: https://youtube.com/live/bqnlpDEmFUU?feature=share For a quick recap of Google I/O, check out this video: https://youtu.be ...",
+                            "duration": "2:05:20",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1",
+                            "image_token": "5a621d453eeaa3011e3105cd5317fcd5f65cdf9cf586969ffae893cd693e9f02",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.5vZzJ5haw-g2iw_1729550252&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-05-10T19:49:45.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 2311329
+                            },
+                            "title": "Google Keynote (Google I/O '23)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AxwWiX_AJuY",
+                            "description": "- Software consulting services: https://www.blungo.com - Zoho One Course (FREE): https://go.blungo.com/zoho-one-course Google Workspace is a suite of business applications and collaboration tools that you can use to administrate your business and accomplish most of the day-to-day office tasks, like emails, meetings, spreadsheets, and more. The ...",
+                            "duration": "6:54",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1",
+                            "image_token": "e97a35c769295251a887952db9617dc6486eee673f45007221155bf590f43a1c",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.mixmLHRUoCvh1w_1734339813&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2022-04-18T14:30:02.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 573814
+                            },
+                            "title": "All 15+ Google Workspace apps explained under 7 minutes",
+                            "uploader": "blungo"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=7vSnesQDLBE",
+                            "description": "0:00 Intro 0:22 Creating a presentation 00:58 Formating a presentation 01:36 Navigating Google Slides 02:45 Adding media 03:27 Adding animation 04:39 Presenting and exporting Watch this tutorial to learn how to use Google Slides. MORE HOW TO VIDEOS: How To Overclock A CPU https://www.youtube.com/watch?v=dJMDB3PjBw8 How To Delete Your LinkedIn ...",
+                            "duration": "5:22",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1",
+                            "image_token": "25c05b25ed3ce918afa691bc7da19ea805d725db3fb3c2df6ce03765ac2c7bcb",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.kDt68bbx0Jl_bA_1731470855&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-07-23T16:00:04.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 472742
+                            },
+                            "title": "How To Use Google Slides",
+                            "uploader": "Insider Tech"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=jV1vkHv4zq8",
+                            "description": "Gemini marks the next phase on our journey to making AI more accessible for everyone. Gemini was developed to recognize, understand, and combine different types of information including text, images, audio, video, and code. Its state-of-the-art performance gives it remarkable new capabilities that is user-friendly for anybody. Plus, it's ...",
+                            "duration": "4:35",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1",
+                            "image_token": "b27564300e2270230b91c2554faa7a6b464fd5539d474933f06196ed9060406a",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.K0YllU9jVoBwDQ_1740448070&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-06T15:01:29.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 1505720
+                            },
+                            "title": "Google's newest and most capable AI | Gemini",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=mbyMWDhQCz4",
+                            "description": "How to Make Google Your Homepage in Google Chrome. You have the ability to set Google Chrome to open up any launch page for both the homepage and startup page. These two pages aren't the same by default, unless you set them to be. This tutorial will apply for computers, laptops, desktops, and tablets running the Windows 10, Windows 8/8.1 ...",
+                            "duration": "1:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1",
+                            "image_token": "6aeaa8cb2a0d8cbefe833dcf50f24e5f146af95057ee710beea1bf147833387a",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.0RJGpx-4K1GaiA_1739862472&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-01-03T21:00:12.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 206465
+                            },
+                            "title": "How to Make Google Your Homepage in Google Chrome",
+                            "uploader": "MDTechVideos"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=_oYMrYCs2fU",
+                            "description": "Google Workspace Basics Full Course Tutorial (4+ Hours) Get Ad-Free Training by becoming a member today! https://www.youtube.com/channel/UCqyBfm_H9ugGirk1ufYA2YA/join Exercise Files: https://learnitanytime.com/p/exercise-files-google-workspace-basics-full-course-tutorial Who it's for: This course is recommended for users who want a quick ...",
+                            "duration": "4:35:44",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1",
+                            "image_token": "d82d01c88bb6d41d6546c94e0f1e9cb9f6a3189d516a39a664a87d644cec2798",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.lzSfbAwNcSchOA_1733935683&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-11-17T17:30:10.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 56348
+                            },
+                            "title": "Google Workspace Basics Full Course Tutorial (4+ Hours)",
+                            "uploader": "Learnit Training"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=CrwrljPQaYA",
+                            "description": "Google Gemini is Google's AI chatbot and it's available for free to use. It's the direct competitor to ChatGPT and Microsoft Copilot. To access it, simply go to https://gemini.google.com/ and log in with your Google account. In this video, I'll cover all the useful functions of Gemini as well as some prompting techniques to make it much ...",
+                            "duration": "16:53",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1",
+                            "image_token": "3696c03b4ea54d5e69166349a66cf4c3535f3ff881a6e49eb56aab0f5d8a35e8",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.2ZRvhSfDBpoAiw_1732916319&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2024-04-05T22:01:55.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 216698
+                            },
+                            "title": "How to Use Google Gemini - Including New Prompts",
+                            "uploader": "Howfinity"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=3tvGp_X-2Ek",
+                            "description": "Google Chrome is an intuitive, yet powerful web browsing by Google. How To Use Google Chrome - Tips And Tricks If you are new to Chrome, you should pay close attention to this tutorial because I walk you through tips and tricks you can implement right now to optimize your browsing experience.",
+                            "duration": "17:39",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1",
+                            "image_token": "55f93191c80e60c2cee20c83980fdb80813582d33fb1f64aa2c4ecc1e3534a56",
+                            "images": {
+                                "large": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "medium": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.K1arRPzZzEPM-A_1727383022&pid=Api",
+                                "small": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2015-10-24T20:50:07.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 293330
+                            },
+                            "title": "How To Use Google Chrome - Step By Step Tutorial",
+                            "uploader": "Seth Riley"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 97841,
+                "text": "from Gmail to iPhone notification summaries.",
+                "chatContext": "The tech industry is charging full-steam ahead on AI, investing tens of billions of dollars into the technology and insisting that consumers get used to having AI pop up in every program they use, from Gmail to iPhone notification summaries.",
+                "resources": {
+                    "images": [
+                        {
+                            "title": "Google Logo and symbol, meaning, history, sign.",
+                            "image": "https://logolook.net/wp-content/uploads/2021/06/Google-Logo-19981.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.--vXPAKUfouC38_EEWEYZQHaEK&pid=Api",
+                            "url": "https://logolook.net/google-logo/",
+                            "height": 2160,
+                            "width": 3840,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo: valor, hist\u00f3ria, PNG",
+                            "image": "https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Hc61OnxQzzhxtp4oJgHdKwHaEK&pid=Api",
+                            "url": "https://logosmarcas.net/google-logo/",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google logo icon. Vector illustration 10930001 Vector Art at Vecteezy",
+                            "image": "https://static.vecteezy.com/system/resources/previews/010/930/001/original/google-logo-icon-illustration-free-vector.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.kDgfn1RL9uUQS-B0fbHePQHaDt&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/10930001-google-logo-icon-vector-illustration",
+                            "height": 962,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "google logo for search site 22721557 PNG",
+                            "image": "https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.vQhNBDQatAdfMfp9Hz325gHaEo&pid=Api",
+                            "url": "https://www.vecteezy.com/png/22721557-google-logo-for-search-site",
+                            "height": 1200,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google rolled out new site names, favicon and sponsored label on ...",
+                            "image": "https://searchengineland.com/wp-content/seloads/2018/07/google-building-logo-shutterstock_559400386.jpg",
+                            "thumbnail": "https://tse4.mm.bing.net/th?id=OIP.vJML8VXkd741rgRNkquq6AHaF0&pid=Api",
+                            "url": "https://searchengineland.com/google-rolled-out-new-site-names-favicon-and-sponsored-label-on-desktop-search-394084",
+                            "height": 1507,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "3D Google vector logo. Google is USA multinational corporation ...",
+                            "image": "https://static.vecteezy.com/system/resources/previews/013/734/184/original/3d-google-logo-google-is-usa-multinational-corporation-free-vector.jpg",
+                            "thumbnail": "https://tse3.mm.bing.net/th?id=OIP.DoYuESoRecI9l-vyqdrEnQHaE-&pid=Api",
+                            "url": "https://www.vecteezy.com/vector-art/13734184-3d-google-vector-logo-google-is-usa-multinational-corporation",
+                            "height": 1292,
+                            "width": 1920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Google Logo Wallpapers (73+ images)",
+                            "image": "http://getwallpapers.com/wallpaper/full/b/9/d/773530-gorgerous-google-logo-wallpapers-2560x1600-for-tablet.jpg",
+                            "thumbnail": "https://tse1.mm.bing.net/th?id=OIP.OpfmP8dIVW3neRPv7-lJtQHaEo&pid=Api",
+                            "url": "http://getwallpapers.com/collection/google-logo-wallpapers",
+                            "height": 1600,
+                            "width": 2560,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "Download High Quality google logo transparent background Transparent ...",
+                            "image": "https://clipartcraft.com/images/transparent-background-google-logo-cool-6.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.yV2ncg6qD_UvWOpobISMJgHaHa&pid=Api",
+                            "url": "https://clipartcraft.com/explore/google-logo-transparent-background/",
+                            "height": 920,
+                            "width": 920,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "The History, Evolution & Meaning Behind The Google Logo",
+                            "image": "https://dwglogo.com/wp-content/uploads/2022/04/the-logo-evolution-of-google.png",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.Tr_0NECUQakLw5EtpeICZQHaGy&pid=Api",
+                            "url": "https://dwglogo.com/google/",
+                            "height": 1278,
+                            "width": 1393,
+                            "source": "Bing"
+                        },
+                        {
+                            "title": "What Makes Google's Gemini the Next-level AI Model to Watch Out For?",
+                            "image": "https://insights.daffodilsw.com/hs-fs/hubfs/Google+I_o+event.webp?width=1920&height=1080&name=Google+I_o+event.webp",
+                            "thumbnail": "https://tse2.mm.bing.net/th?id=OIP.MlVYpArU_EtMLGQaySs3AgHaEK&pid=Api",
+                            "url": "https://insights.daffodilsw.com/blog/google-gemini-algorithm-the-next-level-ai-model",
+                            "height": 1080,
+                            "width": 1920,
+                            "source": "Bing"
+                        }
+                    ],
+                    "videos": [
+                        {
+                            "content": "https://www.youtube.com/watch?v=3KtWfp0UopM",
+                            "description": "Google is celebrating the most searched figures and moments in 25 years of Google Search. From BTS to Taylor Swift, see the moments that have changed the world and inspired the next generation to come. Explore more at https://trends.google.com/trends/yis/2023/GLOBAL/ #YearinSearch Audio described version here: https://www.youtube.com/watch?v ...",
+                            "duration": "3:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3KtWfp0UopM?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.CcujVXmGwFshwQ_1731003838&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:00:31.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 355618783
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AqduXftWeEE",
+                            "description": "This year, we're celebrating the most searched figures and moments in 25 years of Google Search. From some of the world's most iconic performances, to history-making breakthroughs, see the moments that have changed the world and inspired the next generation to come. Explore more at https://yearinsearch.google/trends #YearinSearch Subscribe ...",
+                            "duration": "8:26",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AqduXftWeEE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AqduXftWeEE?autoplay=1",
+                            "image_token": "0ff2643f10602c76e1d7dc619b594edd1521ac79b6d281ed8df6dc645f7e430f",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.7qmcPX6oLa4Ung_1732698098&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.5bveUDZ9KgdKvZhkAjPxLAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-11T13:30:13.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 316556
+                            },
+                            "title": "Google \u2014 25 Years in Search: The Most Searched (Audio Described)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=cNfINi5CNbY",
+                            "description": "Tune in to find out how we're furthering our mission to organize the world's information and make it universally accessible and useful. To watch this keynote interpreted in American Sign Language (ASL), please click here: https://youtube.com/live/bqnlpDEmFUU?feature=share For a quick recap of Google I/O, check out this video: https://youtu.be ...",
+                            "duration": "2:05:20",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/cNfINi5CNbY?autoplay=1",
+                            "image_token": "5a621d453eeaa3011e3105cd5317fcd5f65cdf9cf586969ffae893cd693e9f02",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.5vZzJ5haw-g2iw_1729550252&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.cvH5ekJkI2CK0Hgk8O3DOQHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-05-10T19:49:45.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 2311329
+                            },
+                            "title": "Google Keynote (Google I/O '23)",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=AxwWiX_AJuY",
+                            "description": "- Software consulting services: https://www.blungo.com - Zoho One Course (FREE): https://go.blungo.com/zoho-one-course Google Workspace is a suite of business applications and collaboration tools that you can use to administrate your business and accomplish most of the day-to-day office tasks, like emails, meetings, spreadsheets, and more. The ...",
+                            "duration": "6:54",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/AxwWiX_AJuY?autoplay=1",
+                            "image_token": "e97a35c769295251a887952db9617dc6486eee673f45007221155bf590f43a1c",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.mixmLHRUoCvh1w_1734339813&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.bRT8KCzaWuM6lzwHCNnnewHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2022-04-18T14:30:02.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 573814
+                            },
+                            "title": "All 15+ Google Workspace apps explained under 7 minutes",
+                            "uploader": "blungo"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=7vSnesQDLBE",
+                            "description": "0:00 Intro 0:22 Creating a presentation 00:58 Formating a presentation 01:36 Navigating Google Slides 02:45 Adding media 03:27 Adding animation 04:39 Presenting and exporting Watch this tutorial to learn how to use Google Slides. MORE HOW TO VIDEOS: How To Overclock A CPU https://www.youtube.com/watch?v=dJMDB3PjBw8 How To Delete Your LinkedIn ...",
+                            "duration": "5:22",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/7vSnesQDLBE?autoplay=1",
+                            "image_token": "25c05b25ed3ce918afa691bc7da19ea805d725db3fb3c2df6ce03765ac2c7bcb",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.kDt68bbx0Jl_bA_1731470855&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.RQh0SHaH2fD6fRbDgli3pwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-07-23T16:00:04.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 472742
+                            },
+                            "title": "How To Use Google Slides",
+                            "uploader": "Insider Tech"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=jV1vkHv4zq8",
+                            "description": "Gemini marks the next phase on our journey to making AI more accessible for everyone. Gemini was developed to recognize, understand, and combine different types of information including text, images, audio, video, and code. Its state-of-the-art performance gives it remarkable new capabilities that is user-friendly for anybody. Plus, it's ...",
+                            "duration": "4:35",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/jV1vkHv4zq8?autoplay=1",
+                            "image_token": "b27564300e2270230b91c2554faa7a6b464fd5539d474933f06196ed9060406a",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api",
+                                "motion": "https://tse4.mm.bing.net/th?id=OM.K0YllU9jVoBwDQ_1740448070&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.DQNtsI30jm8RqGJvE0UTKwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-12-06T15:01:29.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 1505720
+                            },
+                            "title": "Google's newest and most capable AI | Gemini",
+                            "uploader": "Google"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=mbyMWDhQCz4",
+                            "description": "How to Make Google Your Homepage in Google Chrome. You have the ability to set Google Chrome to open up any launch page for both the homepage and startup page. These two pages aren't the same by default, unless you set them to be. This tutorial will apply for computers, laptops, desktops, and tablets running the Windows 10, Windows 8/8.1 ...",
+                            "duration": "1:49",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/mbyMWDhQCz4?autoplay=1",
+                            "image_token": "6aeaa8cb2a0d8cbefe833dcf50f24e5f146af95057ee710beea1bf147833387a",
+                            "images": {
+                                "large": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "medium": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api",
+                                "motion": "https://tse3.mm.bing.net/th?id=OM.0RJGpx-4K1GaiA_1739862472&pid=Api",
+                                "small": "https://tse4.mm.bing.net/th?id=OVP.QIbRsBdJ8zW1e3wf2gzkIAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2021-01-03T21:00:12.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 206465
+                            },
+                            "title": "How to Make Google Your Homepage in Google Chrome",
+                            "uploader": "MDTechVideos"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=_oYMrYCs2fU",
+                            "description": "Google Workspace Basics Full Course Tutorial (4+ Hours) Get Ad-Free Training by becoming a member today! https://www.youtube.com/channel/UCqyBfm_H9ugGirk1ufYA2YA/join Exercise Files: https://learnitanytime.com/p/exercise-files-google-workspace-basics-full-course-tutorial Who it's for: This course is recommended for users who want a quick ...",
+                            "duration": "4:35:44",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/_oYMrYCs2fU?autoplay=1",
+                            "image_token": "d82d01c88bb6d41d6546c94e0f1e9cb9f6a3189d516a39a664a87d644cec2798",
+                            "images": {
+                                "large": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "medium": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.lzSfbAwNcSchOA_1733935683&pid=Api",
+                                "small": "https://tse3.mm.bing.net/th?id=OVP.w1chVjselCqcsI2UVIhgOwHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2023-11-17T17:30:10.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 56348
+                            },
+                            "title": "Google Workspace Basics Full Course Tutorial (4+ Hours)",
+                            "uploader": "Learnit Training"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=CrwrljPQaYA",
+                            "description": "Google Gemini is Google's AI chatbot and it's available for free to use. It's the direct competitor to ChatGPT and Microsoft Copilot. To access it, simply go to https://gemini.google.com/ and log in with your Google account. In this video, I'll cover all the useful functions of Gemini as well as some prompting techniques to make it much ...",
+                            "duration": "16:53",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/CrwrljPQaYA?autoplay=1",
+                            "image_token": "3696c03b4ea54d5e69166349a66cf4c3535f3ff881a6e49eb56aab0f5d8a35e8",
+                            "images": {
+                                "large": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "medium": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api",
+                                "motion": "https://tse1.mm.bing.net/th?id=OM.2ZRvhSfDBpoAiw_1732916319&pid=Api",
+                                "small": "https://tse1.mm.bing.net/th?id=OVP.zxnXlPJvgF9sQ9d0Zk-wZgHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2024-04-05T22:01:55.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 216698
+                            },
+                            "title": "How to Use Google Gemini - Including New Prompts",
+                            "uploader": "Howfinity"
+                        },
+                        {
+                            "content": "https://www.youtube.com/watch?v=3tvGp_X-2Ek",
+                            "description": "Google Chrome is an intuitive, yet powerful web browsing by Google. How To Use Google Chrome - Tips And Tricks If you are new to Chrome, you should pay close attention to this tutorial because I walk you through tips and tricks you can implement right now to optimize your browsing experience.",
+                            "duration": "17:39",
+                            "embed_html": "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
+                            "embed_url": "https://www.youtube.com/embed/3tvGp_X-2Ek?autoplay=1",
+                            "image_token": "55f93191c80e60c2cee20c83980fdb80813582d33fb1f64aa2c4ecc1e3534a56",
+                            "images": {
+                                "large": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "medium": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api",
+                                "motion": "https://tse2.mm.bing.net/th?id=OM.K1arRPzZzEPM-A_1727383022&pid=Api",
+                                "small": "https://tse2.mm.bing.net/th?id=OVP.tMWR1Sy1IZhswJmkUCo3rAHgFo&pid=Api"
+                            },
+                            "provider": "Bing",
+                            "published": "2015-10-24T20:50:07.0000000",
+                            "publisher": "YouTube",
+                            "statistics": {
+                                "viewCount": 293330
+                            },
+                            "title": "How To Use Google Chrome - Step By Step Tutorial",
+                            "uploader": "Seth Riley"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 37235,
+        "abslink": "https://arstechnica.com/google/2025/02/google-makes-it-easier-to-remove-your-personal-data-from-search/",
+        "pdflink": null,
+        "md_str": "As Google's 2024 antitrust loss proved, the company has worked very, very hard to ensure its search engine is the primary roadmap for the Internet. Google scours the Internet for data about everything\u2014even you.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 33484,
+        "abslink": "https://www.msn.com/en-us/lifestyle/shopping/google-gifts-pixel-9-owners-fresh-ai-tools-including-new-scam-protection-feature/ar-AA1zQ7Yf",
+        "pdflink": null,
+        "md_str": "Launched in late 2023, Gemini Nano is Google's initiative to enhance mobile devices with advanced AI capabilities. This on-device AI model operates efficiently, allowing it to perform complex tasks without relying on cloud servers. The focus on local processing prioritizes user privacy while enabling faster and more responsive interactions.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 73679,
+        "abslink": "https://www.msn.com/en-us/news/technology/google-makes-it-easier-to-delete-personal-info-from-search-results/ar-AA1zQcxT",
+        "pdflink": null,
+        "md_str": "Google is updating its \"Results about you\" tool to make it easier for users to protect and remove their personal information from Search results.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    },
+    {
+        "id": 51581,
+        "abslink": "https://www.msn.com/en-us/news/technology/google-translate-adds-ai-to-make-the-results-more-accurate-and-personal/ar-AA1zW0wH",
+        "pdflink": null,
+        "md_str": "Google is preparing to launch a big update to its Translate app, adding AI capabilities for better translation accuracy, context, and customization. The new \"Ask a Follow-up\" button helps users get more precise and personalized translations.",
+        "agent": {
+            "model": "llama-3.3-70b",
+            "source": "DDGS",
+            "temp": 0.7,
+            "personality": "friendly"
+        },
+        "posts": []
+    }
+]
