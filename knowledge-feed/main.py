@@ -42,7 +42,8 @@ class Fetcher:
         pass
 
     def categoriser(self, query, query_type='business',start=0):
-        query = query.strip().split(' ').join('+')
+        query = query.strip().split(' ')
+        query = "+".join(query)
         query_type = query_type.lower()
         allContent = []
         converter = DocumentConverter()
@@ -130,16 +131,12 @@ class FeedBuilder:
 class Feed:
     id = -1
 
-    def idgenerator(self):
-        self.id += 1
-        return self.id
-
-
     def __init__(self, abslink, pdflink, md_str):
         self.abslink = abslink
         self.pdflink = pdflink
         self.md_str = md_str
-        self.id = self.idgenerator()
+        Feed.id += 1
+        self.id = Feed.id
         self.items = {
             'objectID': self.id,
             'abslink': self.abslink,
@@ -194,15 +191,14 @@ class Post:
 
     id = -1
 
-    def idgenerator(self):
-        self.id += 1
-        return self.id
+
 
     def __init__(self, text, chatContext, resources):
         self.text = text
         self.chatContext = chatContext
         self.resources = resources
-        self.id = self.idgenerator()
+        Post.id += 1
+        self.id = Post.id
         self.resources = resources
         self.post = {
             'postID': self.id,
@@ -250,26 +246,61 @@ class FeedModifier:
 class ObjectBuilder:
 
     def __init__(self):
-        pass
+        self.model= 'llama-3.3-70b'
+        self.source = 'DDGS'
+
+    def break_markdown(md_str, max_length):
+        # Initialize an empty list to hold the chunks
+        chunks = []
+        # Start from the beginning of the string
+        start = 0
+
+        # Loop until the end of the string
+        while start < len(md_str):
+            # Get the end index for the current chunk
+            end = start + max_length
+            
+            # If the end index exceeds the string length, adjust it
+            if end > len(md_str):
+                end = len(md_str)
+            
+            # Append the chunk to the list
+            chunks.append(md_str[start:end])
+            
+            # Move the start index to the end of the current chunk
+            start = end
+
+        return chunks
 
     def build_posts(self, md_str, resources):
         self.md_str = md_str
         self.recources = resources
         posts = Posts()
+        chunks = ObjectBuilder.break_markdown(md_str, 4000)
+        results = ""
+        for chunk in chunks:
+
+            prompt = f"""You are a deligent research assistant and you have 3 tasks.
+            1. Clean the markdown string given below about a academic or business
+            topic by removing all unnecessary sections that don't cotribute any 
+            insights about the main topic. Must not produce output yet.
+            2. Then analyze the cleaned content and create as many caption-sized highlights
+            as possible. Must not produce output yet.
+            3. Finally, your response should only and only contain a list of strings,
+            that are the highlights you created in the previous step.
+            {chunk}
+        """
+        # call a funtion here that handles everything llm related
+            if LLMHandler().check_health(self.model, self.source):
+                chunk_results = LLMHandler().call_llm(input=prompt, model=self.model, source=self.source, personality='assistant')
+                results = results + chunk_results + "\n"
+            else:
+                chunk_results = ""
+        
+        md_str = (" ").join(results)   
+        md_str.replace("\n", "")
         try:
-            results = DDGS().chat(f"Chunk this text into meaningful parts and only return a list object: {md_str}", model='llama-3.3-70b')
-        except Exception as e:
-            sys.stdout.write(f"Error: {e}\nUsing OpenAI instead\n")
-            openaiResponse = client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "assistant", "content": "Chunk this text into meaningful parts and only return a list object:"},
-                    {"role": "user", "content": md_str},
-                ]
-            )
-            results = openaiResponse.choices[0].message.content
-        try:
-            sentences = json.loads(results)
+            sentences = results.split("\n")
             for i, sentence in enumerate(sentences):
                 post = Post(sentence, md_str, resources)
                 posts.add_post(post.get_post())
@@ -292,17 +323,62 @@ class ObjectBuilder:
         return feed_object.get_feed()
 
 
-class HeathChecker():
-    def __init__(self, model, source):
-        self.source = source
-        self.model = model
-        self.source.lower()
+class LLMHandler():
+    def __init__(self):
         self.health = True
+
+    def call_llm(self, input, model, source,  personality, temp=0.7):
+        results = ""
         if source == 'ddgs':
             try:
-                results = DDGS().chat("Hi", model=model, max_tokens=1)
+                results = DDGS().chat(input, model=model)
             except Exception as e:
                 self.health = False
+        
+        elif source == 'groq':
+            try:
+                results = groq_client.chat.completions.create(
+                model=model,
+                temperature=temp,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": input
+                    }
+                ],
+
+                )
+                results = str(results.choices[0].message.content)
+            except Exception as e:
+                self.health = False
+
+        elif source == 'openai':
+            try:
+                results = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": input
+                        }
+                    ],
+
+                )
+                results = str(results.choices[0].message.content)
+            except Exception as e:
+                self.health = False
+
+        return results
+
+    def check_health(self, model, source):
+        if source == 'ddgs':
+            try:
+                results = DDGS().chat("Hi", model=model)
+            except Exception as e:
+                self.health = False
+                model = "llama-3.1-8b-instant"
+                source = 'groq'
         
         if source == 'groq':
             try:
@@ -311,16 +387,33 @@ class HeathChecker():
                 messages=[
                     {
                         "role": "user",
-                        "content": "You are a smart, sophisticated human with great attention to detial. Give me a short introduction to agentic ai platforms."
+                        "content": "Hi"
                     }
                 ],
-                max_tokens=1,
+                max_tokens=5,
+                )
+            except Exception as e:
+                self.health = False
+                model = "gpt-4o-mini"
+                source = 'openai'
+
+        if source == 'openai':
+            try:
+                results = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": "Hi"
+                        }
+                    ],
+                    max_tokens=5,
                 )
             except Exception as e:
                 self.health = False
 
-        
-
 
      
         return self.health
+    
+
