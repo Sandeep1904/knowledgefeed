@@ -2,6 +2,7 @@ import copy
 import sys
 import json
 import re
+import requests
 import urllib, urllib.request
 import xml.etree.ElementTree as ET
 from duckduckgo_search import DDGS
@@ -17,6 +18,12 @@ key = os.environ.get("OPENAI_API_KEY")
 client = OpenAI(
     api_key = key,
 )
+
+groq_client = OpenAI(
+    api_key = os.environ['GROQ_API_KEY'],
+    base_url = "https://api.groq.com/openai/v1/"
+)
+
 
 
 
@@ -34,34 +41,35 @@ class Fetcher:
     def __init__(self):
         pass
 
-    def categoriser(self, query):
-        try:
-            query_type = DDGS().chat(f"Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business. {query}", model='llama-3.3-70b')
-        except Exception as e:
-            sys.stdout.write(f"Error: {e}\nUsing OpenAI instead\n")
-            openaiResponse = client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "assistant", "content": "Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business."},
-                    {"role": "user", "content": query},
-                ]
-            )
-            query_type = openaiResponse.choices[0].message.content
-        # query_type = DDGS().chat(f"Respond with only one of the choices given in this prompt. Categorise the following input into either Academic or Business. {query}", model='llama-3.3-70b')
-        query_type = query_type.strip().lower()
+    def categoriser(self, query, query_type='business',start=0):
+        query = query.strip().split(' ').join('+')
+        query_type = query_type.lower()
         allContent = []
-      
-
-        if query_type not in ['academic', 'business']:
-            sys.stdout.write('Error: Invalid query type, returning default\n')
-            query_type = 'academic'  # default
+        converter = DocumentConverter()
         
-        elif query_type == 'academic':
-            converter = DocumentConverter()
-            url = 'http://export.arxiv.org/api/query?search_query={query}&start=0&max_results=10'
-            xml_data = urllib.request.urlopen(url).read().decode('utf-8')
-            root = ET.fromstring(xml_data)
-            pdf_sources = [link.get('href') for link in root.findall(".//link[@title='pdf']")]
+        if query_type == 'academic':
+            
+            url = f'http://export.arxiv.org/api/query?search_query={query}&start={start}&max_results=10'
+            try:
+                xml_data = urllib.request.urlopen(url).read().decode('utf-8')
+            except Exception as e:
+                print(f"Error fetching data: {e}")
+                xml_data = ""
+
+            # Parse the XML data
+            if xml_data:
+                root = ET.fromstring(xml_data)
+
+                # Define the namespace
+                ns = {'atom': 'http://www.w3.org/2005/Atom'}
+
+                # Find all PDF links
+                pdf_sources = [link.get('href') for link in root.findall(".//atom:link[@title='pdf']", ns)]
+
+            else:
+                print("No XML data to parse.")
+
+
             for source in pdf_sources:
                 news_sources = DDGS().news(query, max_results=2)
                 img_sources = DDGS().images(query, max_results=2)
@@ -79,7 +87,7 @@ class Fetcher:
                 allContent.append({'pdflink': source, 'md_str': md_str, 'resources': resources})
 
         else:
-            news_sources = DDGS().news(query, max_results=2)
+            news_sources = DDGS().news(query, max_results=10)
             img_sources = DDGS().images(query, max_results=2)
             video_sources = DDGS().videos(query, max_results=2)
             resources = {
@@ -88,7 +96,9 @@ class Fetcher:
             }
             for news in news_sources:
                 # replace this with processing of news articles
-                md_str = news['body']
+                url = news['url']
+                md_str = converter.convert(url)
+                md_str = md_str.document.export_to_markdown()
                 allContent.append({'abslink': news['url'], 'md_str': md_str, 'resources': resources})
 
         return allContent
@@ -99,8 +109,8 @@ class FeedBuilder:
     def __init__(self):
         pass
 
-    def build_feed(self, user_input):
-        allContent = Fetcher().categoriser(user_input)
+    def build_feed(self, user_input, query_type):
+        allContent = Fetcher().categoriser(user_input, query_type)
         feed = []
         for content in allContent:
             abslink = content.get('abslink', None)
@@ -280,3 +290,37 @@ class ObjectBuilder:
         feed_object.add_posts(posts.get_posts())
         sys.stdout.write('Feed built successfully!\n')
         return feed_object.get_feed()
+
+
+class HeathChecker():
+    def __init__(self, model, source):
+        self.source = source
+        self.model = model
+        self.source.lower()
+        self.health = True
+        if source == 'ddgs':
+            try:
+                results = DDGS().chat("Hi", model=model, max_tokens=1)
+            except Exception as e:
+                self.health = False
+        
+        if source == 'groq':
+            try:
+                results = groq_client.chat.completions.create(
+                model=model,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": "You are a smart, sophisticated human with great attention to detial. Give me a short introduction to agentic ai platforms."
+                    }
+                ],
+                max_tokens=1,
+                )
+            except Exception as e:
+                self.health = False
+
+        
+
+
+     
+        return self.health
