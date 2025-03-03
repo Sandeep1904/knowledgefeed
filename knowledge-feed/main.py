@@ -296,7 +296,8 @@ class ObjectBuilder:
             {chunk}
         """
         # call a funtion here that handles everything llm related
-            if LLMHandler().check_health(self.model, self.source):
+            health, self.model, self.source = LLMHandler().check_health(self.model, self.source)
+            if health:
                 chunk_results = LLMHandler().call_llm(input=prompt, model=self.model, source=self.source, personality='assistant')
                 print(f"This is the chunks_result: {chunk_results}")
                 results = results + chunk_results + "\n"
@@ -399,10 +400,11 @@ class LLMHandler():
         if source == 'ddgs':
             try:
                 results = DDGS().chat("Hi", model=model)
+                print("ddgs health check success")
             except Exception as e:
-                print(e)
-                self.health = False
-                model = "llama-3.1-8b-instant"
+                print(f"ddgs health error: {e}")
+
+                model = "llama3-70b-8192"
                 source = 'groq'
         
         if source == 'groq':
@@ -417,9 +419,10 @@ class LLMHandler():
                 ],
                 max_tokens=5,
                 )
+                print("groq health check success")
             except Exception as e:
-                print(e)
-                self.health = False
+                print(f"groq health error: {e}")
+
                 model = "gpt-4o-mini"
                 source = 'openai'
 
@@ -435,15 +438,12 @@ class LLMHandler():
                     ],
                     max_tokens=5,
                 )
+                print("openai health check success")
             except Exception as e:
-                print(e)
+                print(f"openai health error: {e}")
                 self.health = False
-        
-        else:
-            print("Did not go through any llm health")
-
 
      
-        return self.health
+        return self.health, model, source
     
 
