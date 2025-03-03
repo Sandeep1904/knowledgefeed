@@ -304,7 +304,7 @@ class ObjectBuilder:
             else:
                 print("LLM health down")
  
-        md_str = (" ").join(results)   
+        md_str = results   
         # print(f"mdstr after joining {md_str}")
         md_str.replace("\n", "")
         # print(f"mdstr after replacing new line char {md_str}")
