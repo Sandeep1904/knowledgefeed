@@ -2,7 +2,7 @@ from main import FeedBuilder, FeedModifier
 import json
 
 
-user_input = 'spectral graph theory'
+user_input = 'multi head attention'
 query_type = 'academic'
 newFeed = FeedBuilder().build_feed(user_input, query_type)
 

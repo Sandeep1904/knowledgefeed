@@ -190,13 +190,18 @@ class Posts:
 class Post:
 
     id = -1
+    oldobjectID = 0
 
 
-
-    def __init__(self, text, chatContext, resources):
+    def __init__(self, text, chatContext, resources, objectID):
         self.text = text
         self.chatContext = chatContext
         self.resources = resources
+        
+        self.newobjectID = objectID
+        if self.oldobjectID != self.newobjectID:
+            Post.oldobjectID = self.newobjectID
+            Post.id = -1
         Post.id += 1
         self.id = Post.id
         self.resources = resources
@@ -247,7 +252,7 @@ class ObjectBuilder:
 
     def __init__(self):
         self.model= 'llama-3.3-70b'
-        self.source = 'DDGS'
+        self.source = 'ddgs'
 
     def break_markdown(md_str, max_length):
         # Initialize an empty list to hold the chunks
@@ -272,14 +277,14 @@ class ObjectBuilder:
 
         return chunks
 
-    def build_posts(self, md_str, resources):
+    def build_posts(self, md_str, resources, objectID):
         self.md_str = md_str
         self.recources = resources
         posts = Posts()
         chunks = ObjectBuilder.break_markdown(md_str, 4000)
         results = ""
         for chunk in chunks:
-
+ 
             prompt = f"""You are a deligent research assistant and you have 3 tasks.
             1. Clean the markdown string given below about a academic or business
             topic by removing all unnecessary sections that don't cotribute any 
@@ -293,16 +298,25 @@ class ObjectBuilder:
         # call a funtion here that handles everything llm related
             if LLMHandler().check_health(self.model, self.source):
                 chunk_results = LLMHandler().call_llm(input=prompt, model=self.model, source=self.source, personality='assistant')
+                print(f"This is the chunks_result: {chunk_results}")
                 results = results + chunk_results + "\n"
+                print(f"This is the result after adding chunks: {results}")
             else:
-                chunk_results = ""
-        
+                print("LLM health down")
+ 
         md_str = (" ").join(results)   
+        # print(f"mdstr after joining {md_str}")
         md_str.replace("\n", "")
+        # print(f"mdstr after replacing new line char {md_str}")
+        # every sentence is empty
+        # sentences is not empty but new line char
+        # results is series of \n
+        # chunk results is empty -> llm output problem or assignment problem
         try:
             sentences = results.split("\n")
             for i, sentence in enumerate(sentences):
-                post = Post(sentence, md_str, resources)
+                print(f"this is the current sentence {sentence}")
+                post = Post(sentence, md_str, resources, objectID)
                 posts.add_post(post.get_post())
 
         except json.JSONDecodeError as e:
@@ -316,7 +330,7 @@ class ObjectBuilder:
         agent = Agent(model, source, temp, personality)
         feed_object.add_agent(agent.get_agent())
         
-        posts = self.build_posts(md_str, resources)
+        posts = self.build_posts(md_str, resources, feed_object.id)
         
         feed_object.add_posts(posts.get_posts())
         sys.stdout.write('Feed built successfully!\n')
@@ -329,11 +343,14 @@ class LLMHandler():
 
     def call_llm(self, input, model, source,  personality, temp=0.7):
         results = ""
+        source.lower()
         if source == 'ddgs':
             try:
                 results = DDGS().chat(input, model=model)
+                print(f"ddgs gave this result: {results}")
+                print(type(results))
             except Exception as e:
-                self.health = False
+                print(f"ddgs error: {e}")
         
         elif source == 'groq':
             try:
@@ -350,8 +367,10 @@ class LLMHandler():
 
                 )
                 results = str(results.choices[0].message.content)
+                print(f"groq gave this result: {results}")
+                print(type(results))
             except Exception as e:
-                self.health = False
+                print(f"groq error: {e}")
 
         elif source == 'openai':
             try:
@@ -366,8 +385,13 @@ class LLMHandler():
 
                 )
                 results = str(results.choices[0].message.content)
+                print(f"openai gave this result: {results}")
+                print(type(results))
             except Exception as e:
-                self.health = False
+                print(f"openai error: {e}")
+
+        else:
+            print("Did not go through any llm output")
 
         return results
 
@@ -376,6 +400,7 @@ class LLMHandler():
             try:
                 results = DDGS().chat("Hi", model=model)
             except Exception as e:
+                print(e)
                 self.health = False
                 model = "llama-3.1-8b-instant"
                 source = 'groq'
@@ -393,6 +418,7 @@ class LLMHandler():
                 max_tokens=5,
                 )
             except Exception as e:
+                print(e)
                 self.health = False
                 model = "gpt-4o-mini"
                 source = 'openai'
@@ -410,7 +436,11 @@ class LLMHandler():
                     max_tokens=5,
                 )
             except Exception as e:
+                print(e)
                 self.health = False
+        
+        else:
+            print("Did not go through any llm health")
 
 
      
