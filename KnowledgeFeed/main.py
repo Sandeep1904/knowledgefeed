@@ -1,8 +1,6 @@
 import copy
 import sys
 import json
-import re
-import requests
 import urllib, urllib.request
 import xml.etree.ElementTree as ET
 from duckduckgo_search import DDGS
@@ -70,21 +68,24 @@ class Fetcher:
             else:
                 print("No XML data to parse.")
 
-
-            for source in pdf_sources:
-                news_sources = DDGS().news(query, max_results=2)
-                img_sources = DDGS().images(query, max_results=2)
-                video_sources = DDGS().videos(query, max_results=2)
-                md_str = converter.convert(source)
-                md_str = md_str.document.export_to_markdown()
-                
-                # add more to return resources if found
-                resources = {
+            news_sources = DDGS().news(query, max_results=2)
+            img_sources = DDGS().images(query, max_results=2)
+            video_sources = DDGS().videos(query, max_results=2)
+            resources = {
                     'images' : img_sources, # list of objects
                     'videos' : video_sources, # list of objects
                     'newsArticles': news_sources, # list of objects
                 }
 
+
+
+            for source in pdf_sources:
+                
+                md_str = converter.convert(source)
+                md_str = md_str.document.export_to_markdown()
+                
+                # add more to return resources if found
+                
                 allContent.append({'pdflink': source, 'md_str': md_str, 'resources': resources})
 
         else:
@@ -110,8 +111,8 @@ class FeedBuilder:
     def __init__(self):
         pass
 
-    def build_feed(self, user_input, query_type):
-        allContent = Fetcher().categoriser(user_input, query_type)
+    def build_feed(self, user_input, query_type, start):
+        allContent = Fetcher().categoriser(user_input, query_type, start)
         feed = []
         for content in allContent:
             abslink = content.get('abslink', None)
