@@ -4,7 +4,7 @@ import json
 
 user_input = 'multi head attention'
 query_type = 'academic'
-newFeed = FeedBuilder().build_feed(user_input, query_type)
+newFeed = FeedBuilder().build_feed(user_input, query_type, start =0)
 
 # for you to see the output
 file_name = 'output.json'
@@ -82,3 +82,14 @@ with open(file_name, 'w') as json_file:
         ],
     }
 ]
+
+
+# stream instead of batch
+# load more not working
+# character change config with Feed modifier
+# comment UI agent reply
+# bot icon as author
+
+
+# avoid state refresh after clicked
+

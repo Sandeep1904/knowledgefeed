@@ -23,18 +23,6 @@ groq_client = OpenAI(
 )
 
 
-
-
-# for now, user only gives text input.
-# so the feed needs to be constructed with only topic names.
-# the topic names lead to either research papers, news articles, blogs, images, or videos.
-# the decision to categorize, shall be taken by an llm based on a predetermined logic.
-# according to the category, DDGS will fetch the relevant sources.
-# the output of this part should be a text file.
-# text can be empty for images and videos, that will be fed in the resources field.
-
-
-
 class Fetcher:
     def __init__(self):
         pass
@@ -48,9 +36,10 @@ class Fetcher:
         
         if query_type == 'academic':
             
-            url = f'http://export.arxiv.org/api/query?search_query={query}&start={start}&max_results=10'
+            url = f'http://export.arxiv.org/api/query?search_query={query}&start={start}&max_results=2'
             try:
                 xml_data = urllib.request.urlopen(url).read().decode('utf-8')
+                print("Academic data fetch successful")
             except Exception as e:
                 print(f"Error fetching data: {e}")
                 xml_data = ""
@@ -89,7 +78,8 @@ class Fetcher:
                 allContent.append({'pdflink': source, 'md_str': md_str, 'resources': resources})
 
         else:
-            news_sources = DDGS().news(query, max_results=10)
+            news_sources = DDGS().news(query, max_results=2)
+            print("Business data fetch successful")
             img_sources = DDGS().images(query, max_results=2)
             video_sources = DDGS().videos(query, max_results=2)
             resources = {
@@ -102,7 +92,7 @@ class Fetcher:
                 md_str = converter.convert(url)
                 md_str = md_str.document.export_to_markdown()
                 allContent.append({'abslink': news['url'], 'md_str': md_str, 'resources': resources})
-
+        print("Returning all content!")
         return allContent
     
 
@@ -125,8 +115,15 @@ class FeedBuilder:
             personality = 'friendly'
             ob = ObjectBuilder()
             feed.append(ob.build_object(abslink, pdflink, md_str, model, source, temp, personality, resources))
+            print("Sent OBJECT to frontend")
+            yield ob.build_object(abslink, pdflink, md_str, model, source, temp, personality, resources)
             
-        return feed
+        file_name = 'test.json'
+
+        with open(file_name, 'w') as json_file:
+            json.dump(feed, json_file, indent=4)
+            print("Feed stored in Json file")
+
 
 
 class Feed:
@@ -297,18 +294,12 @@ class ObjectBuilder:
             {chunk}
         """
         # call a funtion here that handles everything llm related
-            health, self.model, self.source = LLMHandler().check_health(self.model, self.source)
-            if health:
-                chunk_results = LLMHandler().call_llm(input=prompt, model=self.model, source=self.source, personality='assistant')
-                print(f"This is the chunks_result: {chunk_results}")
-                results = results + chunk_results + "\n"
-                print(f"This is the result after adding chunks: {results}")
-            else:
-                print("LLM health down")
+            # health, self.model, self.source = LLMHandler().check_health(self.model, self.source)
+            chunk_results = LLMHandler().call_llm(input=prompt, model=self.model, source=self.source, personality='assistant')
+            results = results + chunk_results + "\n"
  
         md_str = results   
         # print(f"mdstr after joining {md_str}")
-        md_str.replace("\n", "")
         # print(f"mdstr after replacing new line char {md_str}")
         # every sentence is empty
         # sentences is not empty but new line char
@@ -317,7 +308,7 @@ class ObjectBuilder:
         try:
             sentences = results.split("\n")
             for i, sentence in enumerate(sentences):
-                print(f"this is the current sentence {sentence}")
+                # print(f"this is the current sentence {sentence}")
                 post = Post(sentence, md_str, resources, objectID)
                 posts.add_post(post.get_post())
 
@@ -335,7 +326,7 @@ class ObjectBuilder:
         posts = self.build_posts(md_str, resources, feed_object.id)
         
         feed_object.add_posts(posts.get_posts())
-        sys.stdout.write('Feed built successfully!\n')
+        sys.stdout.write('Object built successfully!\n')
         return feed_object.get_feed()
 
 
@@ -349,12 +340,14 @@ class LLMHandler():
         if source == 'ddgs':
             try:
                 results = DDGS().chat(input, model=model)
-                print(f"ddgs gave this result: {results}")
-                print(type(results))
+                # print(f"ddgs gave this result: {results}")
+                # print(type(results))
             except Exception as e:
-                print(f"ddgs error: {e}")
+                print(f"ddgs output error: {e}")
+                model = "llama-3.3-70b-versatile"
+                source = 'groq'
         
-        elif source == 'groq':
+        if source == 'groq':
             try:
                 results = groq_client.chat.completions.create(
                 model=model,
@@ -369,12 +362,15 @@ class LLMHandler():
 
                 )
                 results = str(results.choices[0].message.content)
-                print(f"groq gave this result: {results}")
-                print(type(results))
+                # print(f"groq gave this result: {results}")
+                # print(type(results))
             except Exception as e:
-                print(f"groq error: {e}")
+                print(f"groq output error: {e}")
+                model = "gpt-4o-mini"
+                source = 'openai'
 
-        elif source == 'openai':
+
+        if source == 'openai':
             try:
                 results = client.chat.completions.create(
                     model=model,
@@ -387,13 +383,10 @@ class LLMHandler():
 
                 )
                 results = str(results.choices[0].message.content)
-                print(f"openai gave this result: {results}")
-                print(type(results))
+                # print(f"openai gave this result: {results}")
+                # print(type(results))
             except Exception as e:
                 print(f"openai error: {e}")
-
-        else:
-            print("Did not go through any llm output")
 
         return results
 
@@ -405,7 +398,7 @@ class LLMHandler():
             except Exception as e:
                 print(f"ddgs health error: {e}")
 
-                model = "llama3-70b-8192"
+                model = "llama-3.3-70b-versatile"
                 source = 'groq'
         
         if source == 'groq':

@@ -1,26 +1,25 @@
 import streamlit as st
 import json
+import KnowledgeFeed.main as kf
 
 from streamlit_carousel import carousel  # For image/video slider
 
-interaction_metrics = {}
+# Initialize interaction_metrics in session state
+if "interaction_metrics" not in st.session_state:
+    st.session_state.interaction_metrics = {}
+
+interaction_metrics = st.session_state.interaction_metrics # Access from the session state
 
 # Placeholder for your API call function
-def call_api(user_input, query_type):
+def call_api(user_input, query_type, start):
     """
     Calls your external package/API to get the JSON response.
     Replace this with your actual API call.
     """
-    # Example using requests:
-    # response = requests.post("your_api_endpoint", json={"input": user_input})
-    # if response.status_code == 200:
-    #     return response.json()
-    # else:
-    #     st.error(f"API Error: {response.status_code}")
-    #     return None
-
-    # Mock JSON data (for demonstration purposes - replace with your API call)
-    with open("test.json", "r") as f: data = json.load(f)
+    # test data
+    # with open("test.json", "r") as f: data = json.load(f)
+    # real data
+    data = kf.FeedBuilder().build_feed(user_input, query_type, start)
     return data
 
 
@@ -43,7 +42,7 @@ def display_post(post, obj_id):
         if media_items:
             carousel(items=media_items, container_height=300)
 
-        col1, col2, col3 = st.columns([1, 1, 2])  # Upvote/Downvote/Chat
+        col1, col2 = st.columns([1, 1])  # Upvote/Downvote/Chat
 
         if col1.button(f"Upvote", key=f"upvote-{post_key}"):  # Unique keys for buttons
             interaction_metrics[post_key]["upvotes"] += 1
@@ -51,7 +50,7 @@ def display_post(post, obj_id):
             interaction_metrics[post_key]["downvotes"] += 1
 
         # Comment Section (Expandable)
-        with st.expander("Comments"):
+        with st.expander("Chat with Mark"):
             comment_key = f"comments-{post_key}"
             if comment_key not in st.session_state:
                 st.session_state[comment_key] = []  # Initialize comments
@@ -64,34 +63,39 @@ def display_post(post, obj_id):
             for comment in st.session_state[comment_key]:
                 st.write(f"- {comment}")
 
+        ddgs = {
+            "model": "llama-3.3-70b",
+            "source": "ddgs",
+            "personality": "assistant",
+            "temp": 0.7,
+        }
+        groq = {
+            "model": "llama-3.3-70b-versatile",
+            "source": "groq",
+            "personality": "assistant",
+            "temp": 0.7,
+        }    
+
         if st.button(f"Change Character", key=f"config-{post_key}"):
-            st.write("Agent Config options would go here...")
+            selected_option = st.selectbox("Select an option", ("Option 1", "Option 2", "Option 3", "Option 4"))
+            if selected_option:
+                st.write(f"Selected option: {selected_option}")
 
-
-        st.write(f"Upvotes: {interaction_metrics[post_key]['upvotes']}")
-        st.write(f"Downvotes: {interaction_metrics[post_key]['downvotes']}")
 
 # ... (Main Streamlit app)
-st.title("LinkedIn-Style Posts")
+st.title("Knowledge Feed")
 
 user_input = st.text_input("Enter your input:")
 query_type = st.selectbox("What type of search would you like?",
                           ("academic", "business"))
-
+start = 0
 if st.button("Load Posts"):
     if user_input:
-        json_response = call_api(user_input, query_type)
-
-        if json_response:
-            for item in json_response:
+        with st.spinner("Loading posts..."):
+            for item in kf.FeedBuilder().build_feed(user_input, query_type, start):  # Iterate directly
                 for post in item["posts"]:
-                    display_post(post, item["objecID"])
-
-            if st.button("Load More"):
-                # Call the API again (you might want to pass some parameters for pagination)
-                st.experimental_rerun()  # Rerun the app to load more posts
-        else:
-            st.write("No data found or API error")
+                    display_post(post, item["objectID"]) #Display each post as it comes.
+                    print(f"rendered post {post['postID']}" )
     else:
         st.write("Please enter input")
 
