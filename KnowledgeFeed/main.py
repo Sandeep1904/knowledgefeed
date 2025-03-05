@@ -116,9 +116,10 @@ class FeedBuilder:
             temp = 0.7
             personality = 'friendly'
             ob = ObjectBuilder()
-            feed.append(ob.build_object(abslink, pdflink, md_str, model, source, temp, personality, resources))
+            objectResponse = ob.build_object(abslink, pdflink, md_str, model, source, temp, personality, resources)
+            feed.append(objectResponse)
             print("Sent OBJECT to frontend")
-            yield ob.build_object(abslink, pdflink, md_str, model, source, temp, personality, resources)
+            yield objectResponse
             
         file_name = 'test.json'
 

@@ -34,8 +34,10 @@ def display_post(post, obj_id):
         st.write(post["text"])
 
         media_items = []
-        for resource in post.get("resources", []):
-            for img in resource.get("images", []):
+        for resource in post["resources"]:
+            print(f"Resource in display_post {resource}")
+            for img in resource["images"]:
+                print(f"img in display_post {img}")
                 media_items.append({"text": "image text", "img": img["image"], "title": img["title"]})
             # for vid in resource.get("videos", []):
             #     media_items.append({"type": "video", "content": vid["video"], "title": vid["title"]})
@@ -93,7 +95,9 @@ if st.button("Load Posts"):
     if user_input:
         with st.spinner("Loading posts..."):
             for item in kf.FeedBuilder().build_feed(user_input, query_type, start):  # Iterate directly
+                # print(f"Item from stream: {item}")
                 for post in item["posts"]:
+                    # print(f"Post from stream: {post}")
                     display_post(post, item["objectID"]) #Display each post as it comes.
                     print(f"rendered post {post['postID']}" )
     else:
