@@ -1,6 +1,6 @@
 [
     {
-        "objecID": 0,
+        "objectID": 0,
         "abslink": "https://example.com/article1",
         "pdflink": "https://example.com/report1.pdf",
         "md_str": "Markdown content for post 1",
@@ -78,7 +78,7 @@
         ]
     },
     {
-        "objecID": 1,
+        "objectID": 1,
         "abslink": "https://example.com/article2",
         "pdflink": "https://example.com/report2.pdf",
         "md_str": "Markdown content for post 2",

@@ -17,9 +17,9 @@ def call_api(user_input, query_type, start):
     Replace this with your actual API call.
     """
     # test data
-    # with open("test.json", "r") as f: data = json.load(f)
+    with open("test.json", "r") as f: data = json.load(f)
     # real data
-    data = kf.FeedBuilder().build_feed(user_input, query_type, start)
+    # data = kf.FeedBuilder().build_feed(user_input, query_type, start)
     return data
 
 
@@ -91,11 +91,17 @@ user_input = st.text_input("Enter your input:")
 query_type = st.selectbox("What type of search would you like?",
                           ("academic", "business"))
 start = 0
+
 if st.button("Load Posts"):
     if user_input:
         with st.spinner("Loading posts..."):
-            for item in kf.FeedBuilder().build_feed(user_input, query_type, start):  # Iterate directly
+            # prod delivery
+            # for item in kf.FeedBuilder().build_feed(user_input, query_type, start):  # Iterate directly
                 # print(f"Item from stream: {item}")
+            # testing delivery
+            data = call_api("hello", "hello", 0)
+            print(data)
+            for item in data:
                 for post in item["posts"]:
                     # print(f"Post from stream: {post}")
                     display_post(post, item["objectID"]) #Display each post as it comes.

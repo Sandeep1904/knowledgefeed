@@ -2,15 +2,19 @@ from main import FeedBuilder, FeedModifier
 import json
 
 
-user_input = 'multi head attention'
-query_type = 'academic'
-newFeed = FeedBuilder().build_feed(user_input, query_type, start =0)
+user_input = 'google flash 2'
+query_type = 'testing'
+start =0
+feed = []
+for newFeed in FeedBuilder().build_feed(user_input, query_type, start =0):
+    print(f"this is the stream: {newFeed}")
+    feed.append(newFeed)
 
 # for you to see the output
-file_name = 'output.json'
+# file_name = 'output.json'
 
-with open(file_name, 'w') as json_file:
-    json.dump(newFeed, json_file, indent=4)
+# with open(file_name, 'w') as json_file:
+#     json.dump(feed, json_file, indent=4)
 
 # lets test the modifications now
 # with open('output.json') as json_file:

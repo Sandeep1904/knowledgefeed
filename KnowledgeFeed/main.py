@@ -28,13 +28,14 @@ class Fetcher:
         pass
 
     def categoriser(self, query, query_type='business',start=0):
-        query = query.strip().split(' ')
-        query = "+".join(query)
+        
         query_type = query_type.lower()
         allContent = []
         converter = DocumentConverter()
         
         if query_type == 'academic':
+            query = query.strip().split(' ')
+            query = "+".join(query)
             
             url = f'http://export.arxiv.org/api/query?search_query={query}&start={start}&max_results=2'
             try:
@@ -60,11 +61,13 @@ class Fetcher:
             news_sources = DDGS().news(query, max_results=2)
             img_sources = DDGS().images(query, max_results=2)
             video_sources = DDGS().videos(query, max_results=2)
-            resources = {
+            resources = [
+                {
                     'images' : img_sources, # list of objects
                     'videos' : video_sources, # list of objects
                     'newsArticles': news_sources, # list of objects
                 }
+            ]
 
 
 
@@ -77,16 +80,43 @@ class Fetcher:
                 
                 allContent.append({'pdflink': source, 'md_str': md_str, 'resources': resources})
 
+        elif query_type == "testing":
+            img_sources = DDGS().images(query, max_results=2)
+            resources = [
+                {
+                'images' : img_sources, # list of objects
+            }
+            ]
+            sources = [
+                {
+                    "url": "https://purplekicks.com/",
+                },
+                {
+                    "url": "https://suggestanime.streamlit.app/"
+                }
+
+            ]
+            for source in sources:
+                url = source['url']
+                response = requests.get(url)
+                md_str = str(response.content)
+                allContent.append({'abslink': source['url'], 'md_str': md_str, 'resources': resources})
+
+
         else:
             news_sources = DDGS().news(query, max_results=2)
+            print(f'news sources {news_sources}')
             print("Business data fetch successful")
             img_sources = DDGS().images(query, max_results=2)
             video_sources = DDGS().videos(query, max_results=2)
-            resources = {
+            resources = [
+                {
                 'images' : img_sources, # list of objects
                 'videos' : video_sources, # list of objects
             }
+            ]
             for news in news_sources:
+                print(f'news {news}')
                 # replace this with processing of news articles
                 url = news['url']
                 # md_str = converter.convert(url)
@@ -105,14 +135,16 @@ class FeedBuilder:
 
     def build_feed(self, user_input, query_type, start):
         allContent = Fetcher().categoriser(user_input, query_type, start)
+        print(allContent)
         feed = []
         for content in allContent:
+            
             abslink = content.get('abslink', None)
             pdflink = content.get('pdflink', None)
             md_str = content.get('md_str', None)
             resources = content.get('resources', None)
             model = 'llama-3.3-70b'
-            source = 'DDGS'
+            source = 'ddgs'
             temp = 0.7
             personality = 'friendly'
             ob = ObjectBuilder()
@@ -121,7 +153,7 @@ class FeedBuilder:
             print("Sent OBJECT to frontend")
             yield objectResponse
             
-        file_name = 'test.json'
+        file_name = 'output.json'
 
         with open(file_name, 'w') as json_file:
             json.dump(feed, json_file, indent=4)
@@ -164,12 +196,14 @@ class Agent:
         self.source = source    
         self.temp = temp
         self.personality = personality
-        self.agent = {
+        self.agent = [
+            {
             'model': self.model,
             'source': self.source,
             'temp': self.temp,
             'personality': self.personality,
         }
+        ]
 
     def get_agent(self):
         return self.agent
