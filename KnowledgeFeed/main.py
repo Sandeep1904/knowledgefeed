@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 from duckduckgo_search import DDGS
 from docling.document_converter import DocumentConverter
 from openai import OpenAI
-import os
+import os, requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -89,8 +89,10 @@ class Fetcher:
             for news in news_sources:
                 # replace this with processing of news articles
                 url = news['url']
-                md_str = converter.convert(url)
-                md_str = md_str.document.export_to_markdown()
+                # md_str = converter.convert(url)
+                # md_str = md_str.document.export_to_markdown()
+                response = requests.get(url)
+                md_str = response.content
                 allContent.append({'abslink': news['url'], 'md_str': md_str, 'resources': resources})
         print("Returning all content!")
         return allContent
