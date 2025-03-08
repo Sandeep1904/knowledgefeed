@@ -7,6 +7,7 @@ from duckduckgo_search import DDGS
 from docling.document_converter import DocumentConverter
 from openai import OpenAI
 import os, requests
+import math
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -294,6 +295,8 @@ class ObjectBuilder:
         chunks = []
         # Start from the beginning of the string
         start = 0
+        percentage = 0.3
+        n = len(chunks)
 
         # Loop until the end of the string
         while start < len(md_str):
@@ -309,6 +312,14 @@ class ObjectBuilder:
             
             # Move the start index to the end of the current chunk
             start = end
+
+        remove = math.floor(n*percentage)
+
+        if n - remove > 2:
+            start_index = remove
+            end_index = n - remove
+
+            return chunks[start_index:end_index]
 
         return chunks
 

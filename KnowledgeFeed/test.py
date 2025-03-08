@@ -88,12 +88,13 @@ for newFeed in FeedBuilder().build_feed(user_input, query_type, start =0):
 ]
 
 
-# stream instead of batch
+# these errors are for streamlit
 # load more not working
 # character change config with Feed modifier
 # comment UI agent reply
-# bot icon as author
-
-
 # avoid state refresh after clicked
+
+
+# for prod app
+
 

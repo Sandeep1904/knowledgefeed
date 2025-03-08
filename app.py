@@ -1,14 +1,20 @@
 import streamlit as st
 import json
 import KnowledgeFeed.main as kf
+from streamlit_carousel import carousel
+import random
 
-from streamlit_carousel import carousel  # For image/video slider
 
 # Initialize interaction_metrics in session state
 if "interaction_metrics" not in st.session_state:
     st.session_state.interaction_metrics = {}
 
-interaction_metrics = st.session_state.interaction_metrics # Access from the session state
+
+# Function to generate random author names
+def generate_random_name():
+    names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry"]  # Add more names
+    return random.choice(names)
+
 
 # Placeholder for your API call function
 def call_api(user_input, query_type, start):
@@ -22,48 +28,66 @@ def call_api(user_input, query_type, start):
     # data = kf.FeedBuilder().build_feed(user_input, query_type, start)
     return data
 
+def incrementcount(interaction_metrics, post_key):
+    interaction_metrics[post_key]["upvotes"] += 1
+
 
 def display_post(post, obj_id):
+    post_key = f"{obj_id}-{post['postID']}"
+    interaction_metrics = st.session_state.interaction_metrics # Access from the session state
 
-    post_key = f"{obj_id}-{post['postID']}"  # Unique key
 
     if post_key not in interaction_metrics:
-        interaction_metrics[post_key] = {"upvotes": 0, "downvotes": 0}  # Initialize
+        interaction_metrics[post_key] = {"upvotes": 0, "downvotes": 0}
 
-    with st.container(border=True): #Card like container for each post
+    
+    with st.container(border=True, key=post_key):  # Add unique key to container
+        # Author information
+        src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRADlISn22Ijhw70O9AR-pjZ7QUHTmHDaSw&s"
+        author_name = generate_random_name() #Generate author name for each post
+        st.markdown(f'<div style="display: flex; align-items: center;"><img src={src} width="50" height="50" style="border-radius: 50%; margin-right: 10px; margin-bottom: 10px;"><span>{author_name}</span></div>', unsafe_allow_html=True) #Display author info with image
+
         st.write(post["text"])
 
         media_items = []
-        for resource in post["resources"]:
-            print(f"Resource in display_post {resource}")
-            for img in resource["images"]:
-                print(f"img in display_post {img}")
-                media_items.append({"text": "image text", "img": img["image"], "title": img["title"]})
-            # for vid in resource.get("videos", []):
-            #     media_items.append({"type": "video", "content": vid["video"], "title": vid["title"]})
+        for resource in post.get("resources", []): #Handle missing resources
+            for img in resource.get("images", []): #Handle missing images
+                media_items.append({"text": "image text", "img": img["image"], "title": img.get("title", "")})  # Handle missing title
         if media_items:
-            carousel(items=media_items, container_height=300)
+            carousel(items=media_items, container_height=300, key=f"carousel_{obj_id}")
 
-        col1, col2 = st.columns([1, 1])  # Upvote/Downvote/Chat
+        col1, col2 = st.columns([1, 1])
 
-        if col1.button(f"Upvote", key=f"upvote-{post_key}"):  # Unique keys for buttons
-            interaction_metrics[post_key]["upvotes"] += 1
+        col1.button(f"Upvote", key=f"upvote-{post_key}", on_click=incrementcount(interaction_metrics, post_key))
+            
+            
+
+
         if col2.button(f"Downvote", key=f"downvote-{post_key}"):
             interaction_metrics[post_key]["downvotes"] += 1
+            
+ 
 
-        # Comment Section (Expandable)
-        with st.expander("Chat with Mark"):
-            comment_key = f"comments-{post_key}"
-            if comment_key not in st.session_state:
-                st.session_state[comment_key] = []  # Initialize comments
+        # Chat with Agent (WhatsApp-like)
+        with st.expander(f"Chat with {author_name}"): #Use the same author name
+            chat_key = f"chat-{post_key}"  # Unique chat key
+            if chat_key not in st.session_state:
+                st.session_state[chat_key] = []
 
-            new_comment = st.text_area("Add a comment:", key=f"text-{comment_key}")
-            if st.button("Submit", key=f"submit-{comment_key}") and new_comment:
-                st.session_state[comment_key].append(new_comment)
-                st.experimental_rerun()  # Refresh to show the new comment
+            for message in st.session_state[chat_key]:
+                st.markdown(
+                    f'<div style="background-color: #e0e0e0; padding: 10px; margin-bottom: 5px; border-radius: 5px;">{message["user"]}: {message["text"]}</div>',
+                    unsafe_allow_html=True,
+                )
 
-            for comment in st.session_state[comment_key]:
-                st.write(f"- {comment}")
+            new_message = st.text_area("Type your message...", key=f"new-message-{chat_key}")
+            if st.button("Send", key=f"send-{chat_key}") and new_message:
+                st.session_state[chat_key].append({"user": "You", "text": new_message})
+                # Add agent's response (replace with your agent logic)
+                st.session_state[chat_key].append({"user": author_name, "text": "Agent's response here..."}) #Agent response
+                st.rerun()
+ 
+
 
         ddgs = {
             "model": "llama-3.3-70b",
@@ -96,21 +120,25 @@ if st.button("Load Posts"):
     if user_input:
         with st.spinner("Loading posts..."):
             # prod delivery
-            # for item in kf.FeedBuilder().build_feed(user_input, query_type, start):  # Iterate directly
+            for item in kf.FeedBuilder().build_feed(user_input, query_type, start):  # Iterate directly
                 # print(f"Item from stream: {item}")
             # testing delivery
-            data = call_api("hello", "hello", 0)
-            print(data)
-            for item in data:
+            # data = call_api("hello", "hello", 0)
+            
+            # print(data)
+            # for item in data:
+                obj_id = item['objectID']
                 for post in item["posts"]:
+                    post_key = f"{obj_id}-{post['postID']}"
+
                     # print(f"Post from stream: {post}")
                     display_post(post, item["objectID"]) #Display each post as it comes.
-                    print(f"rendered post {post['postID']}" )
+                    print(f"rendered post {post_key}" )
     else:
         st.write("Please enter input")
 
 # Display Interaction Metrics (for debugging/monitoring)
-st.write("Interaction Metrics:", interaction_metrics)
+st.write("Interaction Metrics:", st.session_state.interaction_metrics)
 
 
 # CSS for LinkedIn-style layout and responsiveness
