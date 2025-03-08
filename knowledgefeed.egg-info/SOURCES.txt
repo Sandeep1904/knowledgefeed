@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+KnowledgeFeed/__init__.py
+KnowledgeFeed/main.py
+KnowledgeFeed/test.py
+knowledgefeed.egg-info/PKG-INFO
+knowledgefeed.egg-info/SOURCES.txt
+knowledgefeed.egg-info/dependency_links.txt
+knowledgefeed.egg-info/requires.txt
+knowledgefeed.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+beautifulsoup4==4.13.3
+docling==2.25.0
+docling-core==2.20.0
+docling-ibm-models==3.4.0
+docling-parse==3.4.0
+duckduckgo_search==7.3.2
+html2text==2024.2.26
+lxml==5.3.1
+openai==1.65.1
+python-dotenv==1.0.1
+requests==2.32.3
+streamlit==1.42.2
+streamlit_carousel==1.1.2
+torch==2.2.2
+torchvision==0.17.2
+transformers==4.42.4
+urllib3==2.3.0

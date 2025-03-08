@@ -1,3 +1,43 @@
+Metadata-Version: 2.2
+Name: knowledgefeed
+Version: 0.1.0
+Summary: This is a repository dedicated to curating knowledge on any topic related to your domain. This package takes in a topic of your interest and creates a feed of posts with caption-sized facts derived from latest research papers and news articles.
+Home-page: https://github.com/Sandeep1904/knowledgefeed
+Author: Sandeep Hugar
+Author-email: sandeephugar91@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache License, Version 2.0
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4==4.13.3
+Requires-Dist: docling==2.25.0
+Requires-Dist: docling-core==2.20.0
+Requires-Dist: docling-ibm-models==3.4.0
+Requires-Dist: docling-parse==3.4.0
+Requires-Dist: duckduckgo_search==7.3.2
+Requires-Dist: html2text==2024.2.26
+Requires-Dist: lxml==5.3.1
+Requires-Dist: openai==1.65.1
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: requests==2.32.3
+Requires-Dist: streamlit==1.42.2
+Requires-Dist: streamlit_carousel==1.1.2
+Requires-Dist: torch==2.2.2
+Requires-Dist: torchvision==0.17.2
+Requires-Dist: transformers==4.42.4
+Requires-Dist: urllib3==2.3.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
 # KnowledgeFeed
 
 ## Introduction
